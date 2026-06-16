@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+<title>The Cozy Cafeteria – Onehunga, Auckland</title>
+<meta name="description" content="The Cozy Cafeteria — Onehunga's favourite café. All-day breakfast, lunch, cabinet food, and Allpress coffee. 127 Onehunga Mall, Auckland. 4.6★ on Google."/>
+<meta property="og:type" content="restaurant"/>
+<meta property="og:title" content="The Cozy Cafeteria – Onehunga, Auckland"/>
+<meta property="og:description" content="Onehunga's favourite café. All-day breakfast, lunch, and Allpress coffee. Great food, great atmosphere, great people."/>
+<meta property="og:url" content="https://thecozycafeteria.co.nz"/>
+<meta property="og:site_name" content="The Cozy Cafeteria"/>
+<meta property="og:locale" content="en_NZ"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The Cozy Cafeteria – Onehunga, Auckland"/>
+<meta name="twitter:description" content="All-day breakfast, lunch, and Allpress coffee in the heart of Onehunga. 4.6★ on Google with 580+ reviews."/>
+<meta name="geo.region" content="NZ-AUK"/>
+<meta name="geo.placename" content="Onehunga, Auckland"/>
+<link rel="canonical" href="https://thecozycafeteria.co.nz"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF6F0;--warm-white:#FDF9F3;--espresso:#2C1A0E;--dark-brown:#3D2510;
+  --mid-brown:#7B4A28;--caramel:#C07D3A;--caramel-light:#E8A55A;--warm-tan:#D4A66A;
+  --parchment:#EFE6D5;--sage:#7A8C6E;--border:rgba(120,74,40,0.15);
+  --shadow:0 4px 30px rgba(44,26,14,0.12);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--espresso);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,12,5,0.95);backdrop-filter:blur(8px);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:'Playfair Display',serif;font-style:italic;font-size:1.35rem;color:var(--warm-tan);text-decoration:none;white-space:nowrap}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:color .2s}
+.nav-links a:hover{color:var(--caramel-light)}
+.nav-right{display:flex;align-items:center;gap:.75rem}
+.nav-burger{display:none;flex-direction:column;justify-content:space-between;width:26px;height:18px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0}
+.nav-burger span{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.nav-drawer{position:fixed;top:0;right:-100%;width:min(300px,82vw);height:100%;background:#1A0C05;z-index:200;display:flex;flex-direction:column;padding:80px 2rem 2rem;gap:.1rem;transition:right .3s ease;box-shadow:-4px 0 30px rgba(0,0,0,.6)}
+.nav-drawer.open{right:0}
+.nav-drawer a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.95rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.07);transition:color .2s}
+.nav-drawer a:hover{color:var(--caramel-light)}
+.nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199;display:none;backdrop-filter:blur(2px)}
+.nav-overlay.open{display:block}
+
+/* ── HERO ── */
+#hero{min-height:100svh;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center;padding-top:64px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,#7B4A28 0%,#3D2510 45%,#1A0C05 100%)}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(192,125,58,.35) 0%,transparent 60%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 85% 15%,rgba(212,166,106,.18) 0%,transparent 50%)}
+/* Coffee bean decorative elements */
+.hero-deco{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hero-deco span{position:absolute;font-size:1.5rem;opacity:.06;animation:float linear infinite}
+.hero-content{position:relative;z-index:2;padding:2rem;animation:fadeUp 1.2s ease both;max-width:700px}
+.hero-tag{display:inline-block;font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--caramel-light);margin-bottom:1.5rem;font-weight:700}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,5.5rem);font-weight:700;color:#fff;line-height:1.06;margin-bottom:.75rem;text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.hero-title em{font-style:italic;color:var(--warm-tan)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.75);font-weight:300;letter-spacing:.5px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--caramel);color:#fff;padding:.85rem 2rem;border:none;border-radius:2px;font-family:'Lato',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .2s,transform .15s;display:inline-block}
+.btn-primary:hover{background:var(--caramel-light);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;padding:.85rem 2rem;border:1.5px solid rgba(255,255,255,.55);border-radius:2px;font-family:'Lato',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s;display:inline-block}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.4);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:bob 2s ease-in-out infinite}
+.hero-scroll::after{content:'';width:1px;height:32px;background:rgba(255,255,255,.3)}
+
+/* ── ATMOSPHERE STRIP ── */
+.atmosphere{background:var(--espresso);color:rgba(255,255,255,.65);padding:1.1rem 2rem;display:flex;justify-content:center;gap:2.5rem;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;flex-wrap:wrap}
+.atmosphere span{display:flex;align-items:center;gap:.4rem}
+.atmosphere span::before{content:'✦';color:var(--caramel);font-size:.55rem}
+
+/* ── SECTIONS ── */
+section{padding:6rem 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:.6rem}
+/* Section label slides in after parent reveal becomes visible */
+.reveal-left .section-label,.reveal .section-label,.reveal-right .section-label{opacity:0;transform:translateX(-10px);transition:opacity .45s ease .15s,transform .45s ease .15s}
+.reveal-left.visible .section-label,.reveal.visible .section-label,.reveal-right.visible .section-label{opacity:1;transform:translateX(0)}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.8rem);color:var(--dark-brown);line-height:1.15;margin-bottom:.75rem}
+.section-title em{font-style:italic}
+.section-rule{width:44px;height:2px;background:var(--caramel);margin:1rem 0 2rem}
+.section-center{text-align:center}
+.section-center .section-rule{margin-left:auto;margin-right:auto}
+
+/* ── ABOUT ── */
+#about{background:var(--warm-white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-text p{font-size:1rem;line-height:1.85;color:#5A3B25;margin-bottom:1.2rem;font-weight:300}
+.about-photo{border-radius:2px;overflow:hidden;box-shadow:var(--shadow)}
+.about-photo-placeholder{width:100%;height:420px;background:linear-gradient(135deg,#7B4A28 0%,#C07D3A 50%,#3D2510 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+.about-photo-placeholder span{font-size:2.5rem}
+.about-photo-placeholder p{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.7);text-align:center;padding:0 1.5rem}
+
+/* ── CUSTOMER FAVOURITES ── */
+#favourites{background:var(--espresso)}
+#favourites .section-title{color:#fff}
+#favourites .section-label{color:var(--caramel-light)}
+#favourites .section-rule{background:var(--caramel-light)}
+.favs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem}
+.fav-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:2px;padding:2rem 1.5rem;text-align:center;transition:background .25s,transform .25s}
+.fav-card:hover{background:rgba(192,125,58,.12);transform:translateY(-3px)}
+.fav-icon{font-size:2.2rem;margin-bottom:.75rem}
+.fav-name{font-family:'Playfair Display',serif;font-size:1.15rem;color:#fff;margin-bottom:.4rem}
+.fav-desc{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.6;font-weight:300}
+.fav-badge{display:inline-block;margin-top:.75rem;font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;background:var(--caramel);color:#fff;padding:3px 10px;border-radius:2px;font-weight:700}
+
+/* ── MENU ── */
+#menu{background:var(--cream)}
+.menu-tabs{display:flex;margin-bottom:2.5rem;border-bottom:1.5px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.menu-tab{padding:.7rem 1.4rem;background:none;border:none;font-family:'Lato',sans-serif;font-size:.75rem;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;color:var(--mid-brown);cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1.5px;transition:color .2s,border-color .2s;white-space:nowrap}
+.menu-tab:hover{color:var(--dark-brown)}
+.menu-tab.active{color:var(--dark-brown);border-bottom-color:var(--caramel)}
+.menu-panel{display:none}
+.menu-panel.active{display:block}
+.menu-cat-title{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:var(--mid-brown);margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.menu-cat-title:first-child{margin-top:0}
+.menu-item-info{flex:1}
+.menu-item-desc{font-size:.8rem;color:#9A6A45;line-height:1.5;font-weight:300}
+
+/* ── HOURS ── */
+#hours{background:var(--espresso);color:#fff}
+#hours .section-title{color:#fff}
+#hours .section-label{color:var(--caramel-light)}
+#hours .section-rule{background:var(--caramel-light)}
+.hours-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:2px;overflow:hidden;max-width:860px}
+.hours-card{background:rgba(255,255,255,.04);padding:1.5rem 1rem;text-align:center;position:relative}
+.hours-card.today{background:rgba(192,125,58,.18)}
+.hours-day{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.4rem}
+.hours-time{font-family:'Playfair Display',serif;font-size:1rem;color:#fff;line-height:1.3}
+.hours-today-badge{position:absolute;top:.5rem;right:.5rem;background:var(--caramel);color:#fff;font-size:.55rem;letter-spacing:1px;text-transform:uppercase;padding:2px 5px;border-radius:2px;font-weight:700}
+.hours-note{margin-top:1.75rem;color:rgba(255,255,255,.45);font-size:.82rem;font-weight:300;font-style:italic}
+
+/* ── GALLERY ── */
+#gallery{background:var(--parchment)}
+.gallery-intro{font-size:.95rem;color:var(--mid-brown);line-height:1.75;font-weight:300;max-width:600px;margin-bottom:2.5rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gallery-item{position:relative;border-radius:2px;overflow:hidden;aspect-ratio:1;cursor:pointer;background:linear-gradient(135deg,#7B4A28,#C07D3A,#3D2510)}
+.gallery-item.tall{grid-row:span 2;aspect-ratio:auto}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-placeholder{width:100%;height:100%;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,var(--mid-brown),var(--caramel))}
+.gallery-placeholder span{font-size:1.8rem;opacity:.4}
+.gallery-placeholder p{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:700}
+.gallery-upload-note{margin-top:1.5rem;padding:1rem 1.25rem;background:#fff;border-radius:2px;border-left:3px solid var(--caramel);font-size:.83rem;color:var(--mid-brown);font-style:italic}
+.gallery-menu-wrap{grid-column:1/-1;border-radius:2px;overflow:hidden;box-shadow:var(--shadow)}
+.gallery-menu-wrap img{width:100%;display:block;object-fit:contain;background:#fff}
+
+/* ── REVIEWS ── */
+#reviews{background:var(--warm-white)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:#fff;border-radius:2px;padding:1.75rem;box-shadow:var(--shadow);border-top:3px solid var(--caramel);display:flex;flex-direction:column;gap:.75rem;transition:transform .2s}
+.review-card:hover{transform:translateY(-2px)}
+.review-stars{color:var(--caramel);font-size:1rem;letter-spacing:2px}
+.review-text{font-size:.9rem;color:#5A3B25;line-height:1.75;font-weight:300;font-style:italic;flex:1}
+.review-text::before{content:'"';font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--caramel-light);line-height:0;vertical-align:-0.5rem;margin-right:.2rem}
+.review-author{display:flex;align-items:center;gap:.75rem}
+.review-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--caramel),var(--mid-brown));display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;font-weight:700;flex-shrink:0}
+.review-name{font-size:.82rem;font-weight:700;color:var(--dark-brown)}
+.review-date{font-size:.72rem;color:#9A7A58}
+.review-source{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--caramel);font-weight:700}
+.reviews-cta{margin-top:2.5rem;text-align:center}
+.reviews-cta a{display:inline-block;padding:.75rem 2rem;background:var(--espresso);color:#fff;text-decoration:none;font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:2px;transition:background .2s}
+.reviews-cta a:hover{background:var(--dark-brown)}
+
+/* ── MEET THE TEAM ── */
+.team-intro{font-size:.95rem;color:var(--mid-brown);line-height:1.75;font-weight:300;max-width:600px;margin-bottom:3rem}
+.team-name{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--dark-brown);margin-bottom:.2rem}
+.team-role{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:.5rem}
+.team-bio{font-size:.83rem;color:#7B5A3A;line-height:1.65;font-weight:300}
+
+/* ── LOCATION ── */
+#location{background:var(--parchment)}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.map-embed{border-radius:2px;overflow:hidden;box-shadow:var(--shadow)}
+.map-embed iframe{width:100%;height:360px;display:block;border:none}
+.location-info-card{background:#fff;border-radius:2px;padding:1.75rem;box-shadow:var(--shadow)}
+.location-row{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--border);opacity:0;transform:translateX(16px);transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .5s cubic-bezier(.22,1,.36,1)}
+.location-row:last-child{border-bottom:none}
+/* Animate rows after parent reveal fires */
+.reveal.visible .location-row{opacity:1;transform:none}
+.reveal.visible .location-row:nth-child(1){transition-delay:.15s}
+.reveal.visible .location-row:nth-child(2){transition-delay:.25s}
+.reveal.visible .location-row:nth-child(3){transition-delay:.35s}
+.reveal.visible .location-row:nth-child(4){transition-delay:.45s}
+.location-icon{width:36px;height:36px;background:var(--parchment);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.95rem}
+.location-label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:.25rem}
+.location-value{font-size:.9rem;color:var(--dark-brown);line-height:1.5}
+.location-value a{color:var(--mid-brown);text-decoration:none;border-bottom:1px solid var(--border)}
+.location-value a:hover{border-bottom-color:var(--caramel)}
+
+/* ── CONTACT ── */
+#contact{background:var(--warm-white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start}
+.contact-aside p{font-size:.95rem;color:#7B4A28;line-height:1.8;font-weight:300;margin-bottom:1.75rem}
+.contact-social{display:flex;flex-direction:column;gap:.65rem}
+.contact-social a{display:flex;align-items:center;gap:.7rem;font-size:.85rem;color:var(--mid-brown);text-decoration:none;font-weight:400;transition:color .2s}
+.contact-social a:hover{color:var(--caramel)}
+.social-icon{width:32px;height:32px;background:var(--parchment);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.contact-form{background:#fff;padding:2.25rem;border-radius:2px;box-shadow:var(--shadow)}
+.form-row{margin-bottom:1.1rem;opacity:0;transform:translateY(14px);transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .5s cubic-bezier(.22,1,.36,1)}
+.form-row label{display:block;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:.35rem}
+.form-row input,.form-row textarea,.form-row select{width:100%;padding:.7rem .9rem;border:1px solid var(--border);border-radius:2px;font-family:'Lato',sans-serif;font-size:.88rem;color:var(--dark-brown);background:var(--cream);outline:none;transition:border-color .2s;-webkit-appearance:none}
+.form-row input:focus,.form-row textarea:focus,.form-row select:focus{border-color:var(--caramel)}
+.form-row textarea{resize:vertical;min-height:110px}
+.form-row-half{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-submit{width:100%;background:var(--espresso);color:#fff;border:none;padding:.95rem;font-family:'Lato',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:2px;margin-top:.4rem;transition:background .2s}
+.form-submit:hover{background:var(--dark-brown)}
+.form-success{display:none;background:#EAF3DE;border:1px solid #B5C4A1;border-radius:2px;padding:.9rem 1.1rem;color:#3B6D11;font-size:.88rem;margin-top:.9rem;text-align:center}
+
+/* ── FOOTER ── */
+footer{background:#1A0C05;color:rgba(255,255,255,.4);text-align:center;padding:2.25rem 2rem;font-size:.8rem;font-weight:300;opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+footer.footer-visible{opacity:1;transform:none}
+footer strong{font-family:'Playfair Display',serif;font-style:italic;color:var(--warm-tan);font-weight:400}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeScale{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+@keyframes float{0%{transform:translateY(100vh) rotate(0deg)}100%{transform:translateY(-10vh) rotate(360deg)}}
+@keyframes shimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@keyframes rotateSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes underlineIn{from{width:0}to{width:100%}}
+@keyframes countUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes borderGlow{0%,100%{box-shadow:0 0 0 0 rgba(192,125,58,0)}50%{box-shadow:0 0 18px 4px rgba(192,125,58,.25)}}
+@keyframes slideInNav{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroTagIn{from{opacity:0;letter-spacing:6px}to{opacity:1;letter-spacing:3px}}
+@keyframes ripple{0%{transform:scale(0);opacity:.6}100%{transform:scale(4);opacity:0}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInLabel{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+@keyframes flipUp{from{opacity:0;transform:rotateX(-30deg) translateY(16px)}to{opacity:1;transform:rotateX(0) translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── PER-HEADING ANIMATION KEYFRAMES ── */
+@keyframes headBlurIn{from{opacity:0;filter:blur(12px);transform:translateY(10px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@keyframes headStamp{0%{opacity:0;transform:scale(1.55)}70%{transform:scale(.96)}85%{transform:scale(1.03)}100%{opacity:1;transform:scale(1)}}
+@keyframes headFlipUp{from{opacity:0;transform:rotateX(-55deg) translateY(20px);transform-origin:top center}to{opacity:1;transform:rotateX(0) translateY(0)}}
+@keyframes headGlitchSettle{0%{opacity:0}10%{opacity:1;transform:translate(-3px,0);filter:hue-rotate(90deg) saturate(3)}20%{transform:translate(3px,0);filter:hue-rotate(-90deg)}30%{transform:translate(-2px,0);filter:hue-rotate(40deg)}40%{transform:translate(1px,0);filter:hue-rotate(0deg)}60%{filter:none;transform:none;opacity:1}100%{filter:none;transform:none;opacity:1}}
+@keyframes headNeonPop{0%{opacity:0;text-shadow:none}40%{opacity:1;text-shadow:0 0 20px rgba(192,125,58,.8),0 0 40px rgba(192,125,58,.4)}70%{text-shadow:0 0 8px rgba(192,125,58,.3)}100%{text-shadow:none;opacity:1}}
+@keyframes headSpringDrop{0%{opacity:0;transform:translateY(-50px)}65%{transform:translateY(8px)}80%{transform:translateY(-4px)}92%{transform:translateY(2px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes headFadeSlide{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes headCharUp{from{opacity:0;transform:translateY(100%)}to{opacity:1;transform:translateY(0)}}
+@keyframes headWaveChar{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
+
+/* ── GOLDEN SHIMMER SWEEP on italic em in headings ── */
+@keyframes goldSweep{
+  0%{background-position:200% center}
+  100%{background-position:-200% center}
+}
+@keyframes goldShimmer{
+  0%{background-position:200% center}
+  100%{background-position:-200% center}
+}
+.section-title em{
+  font-style:italic;
+  background:linear-gradient(90deg,
+    #7B4A28 0%,
+    #C07D3A 20%,
+    #D4A66A 38%,
+    #E8C07A 46%,
+    #F0D090 50%,
+    #E8C07A 54%,
+    #D4A66A 62%,
+    #C07D3A 80%,
+    #7B4A28 100%
+  );
+  background-size:300% auto;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-position:200% center;
+}
+/* Shimmer starts after heading animation, then loops forever */
+.section-title[data-hanim].hanim-done em{
+  animation:goldShimmer 3.5s linear infinite;
+}
+.section-title[data-hanim="blur"].hanim-done em{animation-delay:.6s}
+.section-title[data-hanim="stamp"].hanim-done em{animation-delay:.5s}
+.section-title[data-hanim="flip"].hanim-done em{animation-delay:.55s}
+.section-title[data-hanim="typewriter"].hanim-done em{animation-delay:.9s}
+.section-title[data-hanim="glitch"].hanim-done em{animation-delay:.7s}
+.section-title[data-hanim="neon"].hanim-done em{animation-delay:.65s}
+.section-title[data-hanim="fadeslide"].hanim-done em{animation-delay:.5s}
+.section-title[data-hanim="wave"].hanim-done em{animation-delay:.85s}
+/* Dark sections — slightly brighter gold so it reads on dark bg */
+#favourites .section-title em,
+#hours .section-title em{
+  background:linear-gradient(90deg,
+    #C07D3A 0%,
+    #D4A66A 20%,
+    #E8A55A 38%,
+    #F5C97A 46%,
+    #FFE0A0 50%,
+    #F5C97A 54%,
+    #E8A55A 62%,
+    #D4A66A 80%,
+    #C07D3A 100%
+  );
+  background-size:300% auto;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-position:200% center;
+}
+
+/* Heading animation base — all headings hidden until triggered */
+.section-title[data-hanim]{opacity:0}
+.section-title[data-hanim].hanim-done{opacity:1}
+
+/* Blur-in (About) */
+.section-title[data-hanim="blur"].hanim-done{animation:headBlurIn .85s cubic-bezier(.22,1,.36,1) both}
+
+/* Stamp (Favourites) */
+.section-title[data-hanim="stamp"].hanim-done{animation:headStamp .7s cubic-bezier(.22,1,.36,1) both}
+
+/* Flip-up (Menu) */
+.section-title[data-hanim="flip"]{perspective:600px}
+.section-title[data-hanim="flip"].hanim-done{animation:headFlipUp .75s cubic-bezier(.22,1,.36,1) both}
+
+/* Glitch (Gallery) */
+.section-title[data-hanim="glitch"].hanim-done{animation:headGlitchSettle .9s steps(1) both}
+
+/* Neon glow (Reviews) */
+.section-title[data-hanim="neon"].hanim-done{animation:headNeonPop 1s ease both}
+
+/* Spring drop (Team) */
+.section-title[data-hanim="spring"].hanim-done{animation:headSpringDrop .8s cubic-bezier(.22,1,.36,1) both}
+
+/* Fade-slide (Location) */
+.section-title[data-hanim="fadeslide"].hanim-done{animation:headFadeSlide .75s cubic-bezier(.22,1,.36,1) both}
+
+/* Typewriter & Wave — span-based, handled by JS */
+.section-title[data-hanim="typewriter"] .ht-char,
+.section-title[data-hanim="wave"] .ht-char{display:inline-block;opacity:0}
+/* em treated as single char unit — must stay inline-block but NOT override background-clip shimmer */
+.section-title[data-hanim="typewriter"] .ht-char.ht-em,
+.section-title[data-hanim="wave"] .ht-char.ht-em{display:inline-block}
+.section-title[data-hanim="typewriter"].hanim-done .ht-char{animation:headCharUp .001s step-end both}
+.section-title[data-hanim="wave"].hanim-done .ht-char{animation:headWaveChar .45s cubic-bezier(.22,1,.36,1) both}
+
+/* Reveal system — direction variants */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(30px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal-right.visible{opacity:1;transform:none}
+.reveal-scale{opacity:0;transform:scale(.93);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+
+/* Stagger delays for child elements */
+.stagger-children>*:nth-child(1){transition-delay:.05s}
+.stagger-children>*:nth-child(2){transition-delay:.15s}
+.stagger-children>*:nth-child(3){transition-delay:.25s}
+.stagger-children>*:nth-child(4){transition-delay:.35s}
+.stagger-children>*:nth-child(5){transition-delay:.45s}
+.stagger-children>*:nth-child(6){transition-delay:.55s}
+
+/* Flip-up reveal variant for review cards */
+.reveal-flip{opacity:0;transform:rotateX(-20deg) translateY(20px);transform-origin:top center;transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1)}
+.reveal-flip.visible{opacity:1;transform:rotateX(0) translateY(0)}
+
+/* Hours card entrance animation */
+.hours-card{opacity:0}
+.hours-card.hours-visible{animation:slideUp .5s cubic-bezier(.22,1,.36,1) forwards}
+.hours-card.today.hours-visible{animation:slideUp .5s cubic-bezier(.22,1,.36,1) forwards,borderGlow 2.5s ease-in-out infinite .5s}
+
+/* Stats bar item entrance */
+.stat-item.stat-visible{opacity:1;transform:none}
+.stat-item:nth-child(1){transition-delay:.05s}
+.stat-item:nth-child(2){transition-delay:.15s}
+.stat-item:nth-child(3){transition-delay:.25s}
+.stat-item:nth-child(4){transition-delay:.35s}
+
+/* Location row stagger is handled via .reveal.visible .location-row CSS rules above */
+
+/* Contact form row stagger */
+.form-row.form-row-visible{opacity:1;transform:none}
+.contact-submit-wrap{opacity:0;transform:translateY(10px);transition:opacity .5s ease .5s,transform .5s ease .5s}
+.contact-submit-wrap.form-row-visible{opacity:1;transform:none}
+
+/* Gallery items individual stagger (override grid-level reveal) */
+.gallery-grid .gallery-item{opacity:0;transform:scale(.94);transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1)}
+.gallery-grid .gallery-item.gallery-item-visible{opacity:1;transform:scale(1)}
+.gallery-grid .gallery-item:nth-child(1){transition-delay:.05s}
+.gallery-grid .gallery-item:nth-child(2){transition-delay:.12s}
+.gallery-grid .gallery-item:nth-child(3){transition-delay:.19s}
+.gallery-grid .gallery-item:nth-child(4){transition-delay:.26s}
+.gallery-grid .gallery-item:nth-child(5){transition-delay:.33s}
+.gallery-grid .gallery-item:nth-child(6){transition-delay:.4s}
+.gallery-grid .gallery-item:nth-child(7){transition-delay:.47s}
+/* Keep hover scale for gallery */
+.gallery-grid .gallery-item.gallery-item-visible:hover{transform:scale(1.03)!important}
+
+/* Menu items — animation handled entirely by JS via item-hidden class */
+/* menu-item base styles defined in ORDERING SYSTEM section below */
+
+/* Atmosphere marquee (mobile) */
+@media(max-width:768px){
+  .atmosphere{overflow:hidden;position:relative;padding:.9rem 0;justify-content:flex-start;flex-wrap:nowrap}
+  .atmosphere-track{display:flex;gap:2.5rem;white-space:nowrap;animation:marquee 18s linear infinite;width:max-content;padding:0 1rem}
+  .atmosphere .atmosphere-track span{flex-shrink:0;font-size:.68rem;opacity:1}
+}
+/* Atmosphere desktop: stagger fade-in */
+@media(min-width:769px){
+  .atmosphere{flex-wrap:wrap;justify-content:center;gap:2.5rem;padding:1.1rem 2rem}
+  .atmosphere-track{display:contents}
+  .atmosphere-track span{opacity:0;animation:fadeUp .5s cubic-bezier(.22,1,.36,1) both}
+  .atmosphere-track span:nth-child(1){animation-delay:.8s}
+  .atmosphere-track span:nth-child(2){animation-delay:.95s}
+  .atmosphere-track span:nth-child(3){animation-delay:1.1s}
+  .atmosphere-track span:nth-child(4){animation-delay:1.25s}
+  /* Hide duplicate spans on desktop */
+  .atmosphere-track span:nth-child(n+5){display:none}
+}
+
+/* Hero animations */
+.hero-tag{animation:heroTagIn 1s cubic-bezier(.22,1,.36,1) .3s both}
+.hero-content{animation:fadeUp 1s cubic-bezier(.22,1,.36,1) .1s both}
+
+/* Nav link slide-in */
+.nav-links li{animation:slideInNav .5s cubic-bezier(.22,1,.36,1) both}
+.nav-links li:nth-child(1){animation-delay:.05s}
+.nav-links li:nth-child(2){animation-delay:.1s}
+.nav-links li:nth-child(3){animation-delay:.15s}
+.nav-links li:nth-child(4){animation-delay:.2s}
+.nav-links li:nth-child(5){animation-delay:.25s}
+.nav-links li:nth-child(6){animation-delay:.3s}
+
+/* Section rule animated draw */
+.section-rule{width:0;transition:width .8s cubic-bezier(.22,1,.36,1) .3s}
+.section-rule.visible{width:44px}
+
+/* Stats bar */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--espresso);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.stat-item{padding:2rem 1rem;text-align:center;border-right:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.stat-item:last-child{border-right:none}
+.stat-item::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(192,125,58,.08),transparent);opacity:0;transition:opacity .4s}
+.stat-item:hover::after{opacity:1}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1;display:block;transition:color .3s}
+.stat-item:hover .stat-num{color:var(--caramel-light)}
+.stat-label{font-size:.65rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.3rem;display:block}
+
+/* Shimmering placeholder skeleton */
+.shimmer-box{background:linear-gradient(90deg,rgba(255,255,255,.03) 0%,rgba(255,255,255,.08) 50%,rgba(255,255,255,.03) 100%);background-size:400px 100%;animation:shimmer 2s infinite linear}
+
+/* Enhanced hover: fav cards */
+.fav-card{transition:background .3s,transform .3s,box-shadow .3s!important}
+.fav-card:hover{transform:translateY(-6px)!important;box-shadow:0 16px 40px rgba(0,0,0,.35)!important}
+.fav-icon{display:inline-block;transition:transform .4s cubic-bezier(.34,1.56,.64,1);font-size:2.4rem;margin-bottom:.75rem}
+.fav-card:hover .fav-icon{transform:scale(1.2) rotate(-5deg)}
+
+/* Enhanced hover: review cards */
+.review-card{transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s!important}
+.review-card:hover{transform:translateY(-4px)!important;box-shadow:0 12px 35px rgba(44,26,14,.18)!important}
+
+/* Enhanced hover: team cards */
+
+/* Gallery items */
+.gallery-item{transition:opacity .55s cubic-bezier(.22,1,.36,1),transform .55s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.gallery-item.gallery-item-visible:hover{transform:scale(1.03);box-shadow:0 14px 35px rgba(44,26,14,.3);z-index:2}
+.gallery-item::after{content:'🔍';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(44,26,14,.45);opacity:0;transition:opacity .3s;color:#fff}
+/* Note: ::after on div won't work for emoji without flex, use overlay div instead */
+
+/* Menu tab animated underline */
+.menu-tab{position:relative}
+.menu-tab::after{content:'';position:absolute;bottom:-1.5px;left:50%;right:50%;height:2.5px;background:var(--caramel);transition:left .25s,right .25s}
+.menu-tab.active::after,.menu-tab:hover::after{left:0;right:0}
+/* Override the border-bottom approach */
+.menu-tab{border-bottom:none!important}
+.menu-tabs{border-bottom:1.5px solid var(--border)}
+
+/* Hours card hover pulse */
+.hours-card{transition:background .3s,transform .25s}
+.hours-card:hover{transform:translateY(-3px)}
+
+/* Atmosphere strip items */
+.atmosphere span{transition:color .25s,letter-spacing .25s}
+.atmosphere span:hover{color:#fff;letter-spacing:2px}
+
+/* Ripple on buttons */
+.btn-primary,.btn-outline,.form-submit,.reviews-cta a{position:relative;overflow:hidden}
+
+/* Scroll progress bar */
+#scrollProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--caramel),var(--caramel-light));width:0%;z-index:300;transition:width .1s linear}
+
+/* ── PAGE CURTAIN ── */
+#curtain{position:fixed;inset:0;background:var(--espresso);z-index:500;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.2rem;transition:opacity .7s ease,visibility .7s ease}
+#curtain.gone{opacity:0;visibility:hidden;pointer-events:none}
+.curtain-logo{font-family:'Playfair Display',serif;font-style:italic;font-size:2.2rem;color:var(--warm-tan);letter-spacing:.02em}
+.curtain-cup{font-size:2.8rem;animation:curtainBob 1.4s ease-in-out infinite}
+.curtain-bar{width:120px;height:2px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;margin-top:.4rem}
+.curtain-bar-fill{height:100%;background:linear-gradient(90deg,var(--caramel),var(--caramel-light));border-radius:2px;animation:curtainLoad 1.2s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes curtainBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes curtainLoad{from{width:0}to{width:100%}}
+
+/* ── BACK TO TOP ── */
+#backToTop{position:fixed;bottom:6rem;right:2rem;width:44px;height:44px;background:var(--espresso);color:var(--caramel-light);border:none;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;z-index:100;opacity:0;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease,background .2s;box-shadow:0 4px 20px rgba(44,26,14,.35)}
+#backToTop.visible{opacity:1;transform:translateY(0)}
+#backToTop:hover{background:var(--mid-brown)}
+
+/* ── FLOATING REVIEW CTA ── */
+#reviewCta{position:fixed;bottom:2rem;left:2rem;background:var(--espresso);color:#fff;border-radius:12px;padding:.75rem 1.1rem;font-size:.78rem;font-family:'Lato',sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;z-index:100;display:flex;align-items:center;gap:.55rem;box-shadow:0 4px 24px rgba(44,26,14,.4);opacity:0;transform:translateY(14px);transition:opacity .4s ease,transform .4s ease,background .2s;pointer-events:none}
+#reviewCta.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+#reviewCta:hover{background:var(--mid-brown)}
+#reviewCta .cta-stars{color:var(--caramel-light);letter-spacing:1px;font-size:.85rem}
+#reviewCta .cta-dismiss{margin-left:.3rem;opacity:.5;font-size:.9rem;padding:.1rem .3rem;cursor:pointer;transition:opacity .2s}
+#reviewCta .cta-dismiss:hover{opacity:1}
+
+/* ── MENU SEARCH ── */
+.menu-search-wrap{position:relative;margin-bottom:1.5rem}
+.menu-search-wrap svg{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--mid-brown);fill:none;stroke-width:2;stroke-linecap:round;opacity:.5;pointer-events:none}
+#menuSearch{width:100%;padding:.7rem .9rem .7rem 2.4rem;background:rgba(120,74,40,.06);border:1px solid rgba(120,74,40,.18);border-radius:4px;font-family:'Lato',sans-serif;font-size:.88rem;color:var(--espresso);outline:none;transition:border-color .2s,background .2s}
+#menuSearch:focus{border-color:var(--caramel);background:rgba(192,125,58,.06)}
+#menuSearch::placeholder{color:rgba(120,74,40,.45)}
+.menu-no-results{text-align:center;padding:2.5rem 1rem;color:var(--mid-brown);font-size:.9rem;opacity:.7;display:none}
+
+/* ── MOBILE NAV IMPROVEMENTS ── */
+.nav-drawer{position:fixed;top:0;right:-100%;width:min(300px,82vw);height:100%;background:#1A0C05;z-index:200;display:flex;flex-direction:column;padding:0 2rem 2rem;gap:.1rem;transition:right .32s cubic-bezier(.22,1,.36,1);box-shadow:-4px 0 30px rgba(0,0,0,.6);overflow-y:auto}
+.nav-drawer-header{display:flex;align-items:center;justify-content:space-between;padding:1.4rem 0 1.2rem;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:.5rem}
+.nav-drawer-logo{font-family:'Playfair Display',serif;font-style:italic;color:var(--warm-tan);font-size:1.1rem}
+.nav-drawer-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:1.4rem;cursor:pointer;padding:.2rem .4rem;line-height:1;transition:color .2s}
+.nav-drawer-close:hover{color:#fff}
+.nav-drawer a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.88rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color .2s,padding-left .2s;display:flex;align-items:center;gap:.7rem}
+.nav-drawer a:hover{color:var(--caramel-light);padding-left:.4rem}
+.nav-drawer a::before{content:'';width:0;height:1px;background:var(--caramel);transition:width .2s;display:block}
+.nav-drawer a:hover::before{width:14px}
+
+/* ── REDUCED MOTION ── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .section-title em{animation:none!important}
+}
+
+/* Active nav link highlight */
+.nav-links a.nav-active{color:var(--caramel-light)}
+.nav-links a{position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--caramel-light);transition:width .25s}
+.nav-links a.nav-active::after,.nav-links a:hover::after{width:100%}
+
+@media(max-width:768px){
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-item{border-bottom:1px solid rgba(255,255,255,.06)}
+  .stat-item:nth-child(2){border-right:none}
+}
+
+/* ── TABLET ── */
+@media(max-width:960px){
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .location-grid{grid-template-columns:1fr;gap:2rem}
+  .favs-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+  .hours-grid{grid-template-columns:repeat(4,1fr)}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .gallery-item.tall{grid-row:span 1}
+}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  nav{padding:0 1rem;height:56px}
+  .nav-links{display:none}
+  .nav-logo{font-size:1.1rem}
+  .nav-burger{display:flex}
+  #hero{padding-top:56px}
+  .hero-title{font-size:clamp(2.4rem,10vw,3.4rem)}
+  .hero-sub{font-size:.88rem;margin-bottom:1.75rem}
+  .hero-btns{flex-direction:column;align-items:center;gap:.7rem}
+  .btn-primary,.btn-outline{width:100%;max-width:270px;text-align:center}
+  .hero-scroll{display:none}
+  .atmosphere{gap:.75rem;font-size:.68rem;padding:.9rem 1rem}
+  section{padding:3.5rem 1.25rem}
+  .section-title{font-size:1.75rem}
+  .about-photo-placeholder{height:240px!important}
+  .about-photo img{height:280px!important}
+  .menu-tab{padding:.6rem .9rem;font-size:.7rem;letter-spacing:1px}
+  .menu-grid{grid-template-columns:1fr}
+  .favs-grid,.reviews-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .hours-grid{grid-template-columns:1fr 1fr}
+  .hours-time{font-size:.9rem}
+  .map-embed iframe{height:240px}
+  .form-row-half{grid-template-columns:1fr}
+  .contact-form{padding:1.5rem}
+  footer{padding:1.75rem 1.25rem}
+}
+@media(max-width:380px){
+  .hero-title{font-size:2.2rem}
+  .menu-tab{padding:.55rem .7rem;font-size:.65rem}
+}
+
+/* ══════════ ORDERING SYSTEM ══════════ */
+
+.menu-intro{font-size:.92rem;color:var(--mid-brown);max-width:560px;margin:.75rem 0 2rem;line-height:1.7}
+
+/* Menu item cards with Add to Order button */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:0}
+.menu-item{display:flex;justify-content:space-between;align-items:center;padding:.85rem 0;border-bottom:1px dashed rgba(120,74,40,.12);gap:.75rem;transition:opacity .28s ease,transform .28s ease}
+.menu-item.item-hidden{opacity:0;transform:translateY(8px)}
+.menu-item-info{flex:1;min-width:0}
+.menu-item-name{font-weight:700;font-size:.95rem;color:var(--espresso);margin-bottom:.15rem}
+.menu-item-desc{font-size:.8rem;color:var(--mid-brown);line-height:1.5;opacity:.85}
+.menu-item-right{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.menu-item-price{font-weight:700;color:var(--caramel);font-size:.95rem;white-space:nowrap}
+.menu-item-add{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--caramel);background:transparent;color:var(--caramel);font-size:1.2rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;line-height:1}
+.menu-item-add:hover{background:var(--caramel);color:#fff;transform:scale(1.08)}
+.menu-item-add.added{background:#3B6D11;border-color:#3B6D11;color:#fff}
+.menu-cat-title{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:var(--mid-brown);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.menu-cat-title:first-child{margin-top:0}
+.menu-subcat-title{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--caramel);margin:1.5rem 0 .5rem}
+
+/* ── ITEM OPTIONS MODAL ── */
+.order-modal-overlay{position:fixed;inset:0;background:rgba(44,26,14,.55);z-index:300;display:none;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(2px)}
+.order-modal-overlay.open{display:flex}
+.order-modal{background:#fff;border-radius:10px;max-width:480px;width:100%;max-height:88vh;overflow-y:auto;position:relative;padding:1.75rem;box-shadow:0 20px 60px rgba(44,26,14,.4);animation:modalPop .28s cubic-bezier(.22,1,.36,1)}
+@keyframes modalPop{from{opacity:0;transform:scale(.94) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.order-modal-close{position:absolute;top:.9rem;right:.9rem;width:32px;height:32px;border-radius:50%;border:none;background:rgba(120,74,40,.08);color:var(--mid-brown);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.order-modal-close:hover{background:rgba(120,74,40,.18)}
+.modal-item-name{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--espresso);margin-bottom:.3rem;padding-right:2rem}
+.modal-item-desc{font-size:.85rem;color:var(--mid-brown);line-height:1.6;margin-bottom:1.25rem;opacity:.85}
+.modal-section{margin-bottom:1.25rem}
+.modal-section-label{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--caramel);margin-bottom:.6rem;display:flex;align-items:center;gap:.4rem}
+.modal-section-label .required-star{color:#C0593A}
+.modal-options{display:flex;flex-direction:column;gap:.5rem}
+.modal-option{display:flex;align-items:center;justify-content:space-between;padding:.65rem .9rem;border:1.5px solid var(--border);border-radius:6px;cursor:pointer;transition:border-color .2s,background .2s;font-size:.88rem}
+.modal-option:hover{border-color:var(--caramel)}
+.modal-option input{accent-color:var(--caramel);width:16px;height:16px;flex-shrink:0}
+.modal-option-label{flex:1;display:flex;align-items:center;gap:.6rem;color:var(--espresso)}
+.modal-option-price{color:var(--caramel);font-weight:700;font-size:.85rem;white-space:nowrap}
+.modal-option.checked{border-color:var(--caramel);background:rgba(192,125,58,.06)}
+.modal-option.disabled{opacity:.4;cursor:not-allowed}
+/* Pill-style for sizes */
+.modal-pills{display:flex;gap:.5rem;flex-wrap:wrap}
+.modal-pill{padding:.5rem 1.1rem;border:1.5px solid var(--border);border-radius:20px;cursor:pointer;font-size:.85rem;font-weight:700;color:var(--mid-brown);transition:all .2s;display:flex;align-items:center;gap:.4rem}
+.modal-pill input{display:none}
+.modal-pill:hover{border-color:var(--caramel)}
+.modal-pill.checked{border-color:var(--caramel);background:var(--caramel);color:#fff}
+.modal-pill-price{font-size:.75rem;opacity:.75}
+/* Quantity stepper */
+.modal-qty{display:flex;align-items:center;gap:1rem;justify-content:center;margin-bottom:1.25rem}
+.modal-qty button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--caramel);background:transparent;color:var(--caramel);font-size:1.2rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.modal-qty button:hover{background:var(--caramel);color:#fff}
+.modal-qty span{font-size:1.2rem;font-weight:700;min-width:2ch;text-align:center;color:var(--espresso)}
+/* Notes field */
+.modal-notes{width:100%;padding:.7rem .85rem;border:1.5px solid var(--border);border-radius:6px;font-family:'Lato',sans-serif;font-size:.85rem;resize:vertical;min-height:60px;outline:none;transition:border-color .2s}
+.modal-notes:focus{border-color:var(--caramel)}
+/* Modal footer */
+.modal-footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+.modal-total{font-size:1.25rem;font-weight:700;color:var(--espresso)}
+.modal-total span{color:var(--caramel)}
+.modal-add-btn{padding:.85rem 1.75rem;background:var(--espresso);color:#fff;border:none;border-radius:6px;font-weight:700;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.modal-add-btn:hover{background:var(--mid-brown)}
+.modal-add-btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* ── FLOATING CART BUTTON ── */
+#cartBtn{position:fixed;bottom:2rem;right:2rem;width:58px;height:58px;border-radius:50%;background:var(--caramel);color:#fff;border:none;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:150;box-shadow:0 6px 24px rgba(192,125,58,.45);transition:transform .2s,background .2s}
+#cartBtn:hover{background:var(--mid-brown);transform:scale(1.06)}
+#cartBtn.bump{animation:cartBump .35s ease}
+@keyframes cartBump{0%,100%{transform:scale(1)}40%{transform:scale(1.18)}}
+.cart-count{position:absolute;top:-4px;right:-4px;background:var(--espresso);color:#fff;font-size:.7rem;font-weight:700;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
+/* Hide cart button when it would clash with back-to-top/review CTA — shift up */
+#cartBtn{bottom:2rem}
+@media(max-width:600px){
+  #cartBtn{right:1.25rem;bottom:1.25rem;width:52px;height:52px;font-size:1.3rem}
+  #backToTop{right:1.25rem;bottom:5.25rem;width:40px;height:40px}
+}
+
+/* ── CART PANEL ── */
+.cart-overlay{position:fixed;inset:0;background:rgba(44,26,14,.5);z-index:250;display:none;backdrop-filter:blur(2px)}
+.cart-overlay.open{display:block}
+.cart-panel{position:fixed;top:0;right:-100%;width:min(420px,92vw);height:100%;background:var(--warm-white);z-index:260;display:flex;flex-direction:column;transition:right .32s cubic-bezier(.22,1,.36,1);box-shadow:-6px 0 30px rgba(44,26,14,.25)}
+.cart-panel.open{right:0}
+.cart-header{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem 1.1rem;border-bottom:1px solid var(--border)}
+.cart-header h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--espresso)}
+.cart-close{width:34px;height:34px;border-radius:50%;border:none;background:rgba(120,74,40,.08);color:var(--mid-brown);font-size:1rem;cursor:pointer;transition:background .2s}
+.cart-close:hover{background:rgba(120,74,40,.18)}
+.cart-items{flex:1;overflow-y:auto;padding:1rem 1.5rem}
+.cart-empty{text-align:center;color:var(--mid-brown);opacity:.6;padding:3rem 1rem;font-size:.9rem}
+.cart-item{display:flex;gap:.85rem;padding:.9rem 0;border-bottom:1px dashed rgba(120,74,40,.12)}
+.cart-item-info{flex:1;min-width:0}
+.cart-item-name{font-weight:700;font-size:.9rem;color:var(--espresso)}
+.cart-item-opts{font-size:.76rem;color:var(--mid-brown);opacity:.8;line-height:1.5;margin-top:.15rem}
+.cart-item-right{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem;flex-shrink:0}
+.cart-item-price{font-weight:700;color:var(--caramel);font-size:.88rem;white-space:nowrap}
+.cart-item-remove{background:none;border:none;color:var(--mid-brown);opacity:.5;cursor:pointer;font-size:.78rem;text-decoration:underline;padding:0;transition:opacity .2s}
+.cart-item-remove:hover{opacity:1;color:#C0593A}
+.cart-footer{padding:1.25rem 1.5rem 1.5rem;border-top:1px solid var(--border)}
+.cart-table-row{margin-bottom:1rem}
+.cart-table-row label{display:block;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--caramel);margin-bottom:.5rem}
+.cart-table-row input{width:100%;padding:.7rem .85rem;border:1.5px solid var(--border);border-radius:6px;font-size:1rem;font-family:'Lato',sans-serif;outline:none;transition:border-color .2s}
+.cart-table-row input:focus{border-color:var(--caramel)}
+.cart-table-row input.shake{animation:shake .4s ease}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center;font-size:1.15rem;font-weight:700;color:var(--espresso);margin-bottom:1rem;padding-top:.5rem}
+.cart-total-row span:last-child{color:var(--caramel)}
+.cart-submit{width:100%;padding:1rem;background:var(--espresso);color:#fff;border:none;border-radius:6px;font-weight:700;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.cart-submit:hover{background:var(--mid-brown)}
+.cart-submit:disabled{opacity:.5;cursor:not-allowed}
+.cart-success{display:none;text-align:center;margin-top:.9rem;padding:.8rem;background:#EAF3DE;color:#3B6D11;border-radius:6px;font-size:.85rem;font-weight:700}
+.cart-success.show{display:block;animation:fadeUp .4s ease}
+
+/* ── KITCHEN VIEW ── */
+#kitchenView{display:none;min-height:100vh;background:#1A0C05;color:#fff;padding:1.5rem;font-family:'Lato',sans-serif}
+#kitchenView.active{display:block}
+.kitchen-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
+.kitchen-header h1{font-family:'Playfair Display',serif;font-style:italic;font-size:1.6rem;color:var(--warm-tan)}
+.kitchen-meta{font-size:.8rem;color:rgba(255,255,255,.5)}
+.kitchen-refresh{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.78rem;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-weight:700;transition:background .2s}
+.kitchen-refresh:hover{background:rgba(255,255,255,.15)}
+.kitchen-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+.kitchen-order{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:1.1rem;border-left:4px solid var(--caramel)}
+.kitchen-order.urgent{border-left-color:#C0593A}
+.kitchen-order-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.75rem;padding-bottom:.6rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.kitchen-table{font-size:1.4rem;font-weight:700;color:var(--caramel-light)}
+.kitchen-time{font-size:.75rem;color:rgba(255,255,255,.45)}
+.kitchen-items{display:flex;flex-direction:column;gap:.6rem;margin-bottom:.9rem}
+.kitchen-item-row{font-size:.88rem;line-height:1.5}
+.kitchen-item-qty{color:var(--caramel-light);font-weight:700;margin-right:.4rem}
+.kitchen-item-opts{font-size:.76rem;color:rgba(255,255,255,.5);padding-left:1.6rem}
+.kitchen-done-btn{width:100%;padding:.7rem;background:rgba(192,125,58,.15);border:1px solid var(--caramel);color:var(--caramel-light);border-radius:6px;font-weight:700;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.kitchen-done-btn:hover{background:var(--caramel);color:#fff}
+.kitchen-empty{text-align:center;padding:4rem 1rem;color:rgba(255,255,255,.4)}
+/* Kitchen PIN gate */
+#kitchenPinGate{display:none;min-height:100vh;background:#1A0C05;color:#fff;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem}
+#kitchenPinGate.active{display:flex}
+#kitchenPinGate h2{font-family:'Playfair Display',serif;font-style:italic;color:var(--warm-tan);font-size:1.4rem}
+#kitchenPinInput{padding:.85rem 1.2rem;border-radius:6px;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:#fff;font-size:1.4rem;text-align:center;letter-spacing:6px;width:160px;outline:none}
+#kitchenPinInput:focus{border-color:var(--caramel)}
+#kitchenPinSubmit{padding:.7rem 1.6rem;background:var(--caramel);color:#fff;border:none;border-radius:6px;font-weight:700;cursor:pointer;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+#kitchenPinError{color:#E08A6E;font-size:.8rem;display:none}
+
+@media(max-width:480px){
+  .modal-pills{gap:.4rem}
+  .modal-pill{padding:.45rem .85rem;font-size:.78rem}
+  .kitchen-grid{grid-template-columns:1fr}
+}
+</style>
+
+<!-- ══════════ KITCHEN PIN GATE & VIEW (hidden, accessed via ?kitchen) ══════════ -->
+<div id="kitchenPinGate">
+  <h2>The Cozy Cafeteria — Staff</h2>
+  <input type="password" id="kitchenPinInput" inputmode="numeric" maxlength="4" placeholder="••••"/>
+  <button id="kitchenPinSubmit">Enter</button>
+  <div id="kitchenPinError">Incorrect PIN — try again</div>
+</div>
+
+<div id="kitchenView">
+  <div class="kitchen-header">
+    <h1>Kitchen Orders</h1>
+    <div class="kitchen-meta" id="kitchenMeta">Loading…</div>
+    <button class="kitchen-refresh" id="kitchenRefresh">↻ Refresh</button>
+  </div>
+  <div class="kitchen-grid" id="kitchenGrid"></div>
+</div>
+
+<!-- ══ FIREBASE SDK ══ -->
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+  import { getDatabase, ref, set, get, remove, onValue } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+
+  /* ─────────────────────────────────────────────────────────────
+     PASTE YOUR FIREBASE CONFIG HERE
+     Go to: console.firebase.google.com → Your Project →
+     Project Settings → Your Apps → Web App → Config snippet
+     Replace the placeholder values below with your real ones.
+  ───────────────────────────────────────────────────────────── */
+  const firebaseConfig = {
+    apiKey:            "AIzaSyBd1jQu8mMOPVgCB_hlyFeuOfN6n0xSNYA",
+    authDomain:        "thecozycafeteria-f7706.firebaseapp.com",
+    databaseURL:       "https://thecozycafeteria-f7706-default-rtdb.firebaseio.com",
+    projectId:         "thecozycafeteria-f7706",
+    storageBucket:     "thecozycafeteria-f7706.firebasestorage.app",
+    messagingSenderId: "762980256759",
+    appId:             "1:762980256759:web:d075bff9f2f55859f8fcf2"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db  = getDatabase(app);
+
+  /* Expose Firebase helpers on window so the ordering scripts below can reach them */
+  window._fb = { db, ref, set, get, remove, onValue };
+</script>
+</head>
+<body>
+<div id="curtain" onclick="document.getElementById('curtain').classList.add('gone')">
+  <div class="curtain-cup">☕</div>
+  <div class="curtain-logo">The Cozy Cafeteria</div>
+  <div class="curtain-bar"><div class="curtain-bar-fill"></div></div>
+</div>
+<button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<a id="reviewCta" href="https://www.google.com/search?sca_esv=4a455b0f3ad2390b&sxsrf=ANbL-n69IClMdL_w7jKZwljoN4rmK6eZ2A:1781076001247&q=The+cozy+cafeteria&sa=X&ved=2ahUKEwj-7fySkfyUAxUFa_UHHaOuAKwQrrQLegQIIRAA&biw=1512&bih=917&dpr=2" target="_blank" rel="noopener">
+  <span class="cta-stars">★★★★★</span>
+  <span>Leave us a review</span>
+  <span class="cta-dismiss" id="ctaDismiss" title="Dismiss">✕</span>
+</a>
+<div id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">The Cozy Cafeteria</a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#location">Find Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-burger" id="navBurger" onclick="toggleNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header">
+    <span class="nav-drawer-logo">The Cozy Cafeteria</span>
+    <button class="nav-drawer-close" onclick="closeNav()" aria-label="Close menu">✕</button>
+  </div>
+  <a href="#menu" onclick="closeNav()">Menu</a>
+  <a href="#gallery" onclick="closeNav()">Gallery</a>
+  <a href="#reviews" onclick="closeNav()">Reviews</a>
+  <a href="#location" onclick="closeNav()">Find Us</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+</div>
+<div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-deco" id="heroDeco"></div>
+  <div class="hero-content">
+    <p class="hero-tag">Onehunga, Auckland &middot; 127 Onehunga Mall</p>
+    <h1 class="hero-title">The <em>Cozy</em><br>Cafeteria</h1>
+    <p class="hero-sub">Great café &middot; Great food &middot; Great atmosphere</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#menu">View Menu</a>
+      <a class="btn-outline" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ATMOSPHERE STRIP -->
+<div class="atmosphere">
+  <div class="atmosphere-track">
+    <span>Dine In &amp; Takeaway</span>
+    <span>Outdoor Seating</span>
+    <span>Kids Welcome</span>
+    <span>Allpress Coffee</span>
+    <span>Dine In &amp; Takeaway</span>
+    <span>Outdoor Seating</span>
+    <span>Kids Welcome</span>
+    <span>Allpress Coffee</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="stats-bar">
+  <div class="stat-item"><span class="stat-num" data-target="10" data-suffix="+">0</span><span class="stat-label">Years Serving Onehunga</span></div>
+  <div class="stat-item"><span class="stat-num" data-target="46" data-decimal="true">0</span><span class="stat-label">★ Google Rating</span></div>
+  <div class="stat-item"><span class="stat-num" data-target="582" data-suffix="+">0</span><span class="stat-label">Google Reviews</span></div>
+  <div class="stat-item"><span class="stat-num" data-target="100" data-suffix="+">0</span><span class="stat-label">Happy Regulars</span></div>
+</div>
+<section id="about">
+  <div class="section-inner about-grid">
+    <div class="about-text reveal-left">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title" data-hanim="blur">A <em>home away</em><br>from home</h2>
+      <div class="section-rule"></div>
+      <p>Tucked along Onehunga Mall, The Cozy Cafeteria is a warmly-lit spot that feels like Nana's kitchen — mismatched furniture, cosy corners, and the smell of freshly brewed Allpress coffee in the air.</p>
+      <p>The team welcomes everyone: early morning regulars, families, solo travellers catching the next train, and groups settling in for a long brunch. The food is honest, generous, and made with care.</p>
+      <p>Whether you're here for the famous Big Breakfast, a slice of cheesecake, or just a strong flat white — there's always a warm seat waiting for you.</p>
+    </div>
+    <div class="about-photo reveal-right">
+      <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="Inside The Cozy Cafeteria" style="width:100%;height:420px;object-fit:cover;display:block;border-radius:2px"/>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER FAVOURITES -->
+<section id="favourites">
+  <div class="section-inner">
+    <div class="reveal section-center">
+      <p class="section-label">What Everyone Orders</p>
+      <h2 class="section-title" data-hanim="stamp">Customer <em>Favourites</em></h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="favs-grid stagger-children">
+      <div class="fav-card reveal-scale">
+        <div class="fav-icon">🍳</div>
+        <div class="fav-name">Big Breakfast</div>
+        <div class="fav-desc">Bacon, sausages, eggs, hash brown, mushrooms, tomato &amp; toast. The one that started it all.</div>
+        <span class="fav-badge">Most Ordered</span>
+      </div>
+      <div class="fav-card reveal-scale">
+        <div class="fav-icon">☕</div>
+        <div class="fav-name">Flat White</div>
+        <div class="fav-desc">Silky Allpress espresso with perfectly steamed milk. Our regulars can't start the day without one.</div>
+        <span class="fav-badge">Staff Pick</span>
+      </div>
+      <div class="fav-card reveal-scale">
+        <div class="fav-icon">🌽</div>
+        <div class="fav-name">Corn Fritters</div>
+        <div class="fav-desc">Homemade fritters with bacon, balsamic mesclun &amp; slow roasted tomato. A true Cozy classic.</div>
+        <span class="fav-badge">Customer Fave</span>
+      </div>
+      <div class="fav-card reveal-scale">
+        <div class="fav-icon">🥚</div>
+        <div class="fav-name">Big Benny</div>
+        <div class="fav-desc">Poached eggs on a kaiser roll with spinach, hashbrown &amp; hollandaise. Choose bacon or smoked salmon.</div>
+        <span class="fav-badge">Weekend Hit</span>
+      </div>
+      <div class="fav-card reveal-scale">
+        <div class="fav-icon">🥩</div>
+        <div class="fav-name">Steak Sandwich</div>
+        <div class="fav-desc">Sirloin on Turkish bread with fried eggs, gherkin, garden greens &amp; fries. Lunch sorted.</div>
+        <span class="fav-badge">Lunch Fave</span>
+      </div>
+      <div class="fav-card reveal-scale">
+        <div class="fav-icon">🍓</div>
+        <div class="fav-name">French Toast</div>
+        <div class="fav-desc">Brioche with bacon, grilled banana, berry compote &amp; maple syrup. Indulgent and worth every bite.</div>
+        <span class="fav-badge">Sweet Treat</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Order Online</p>
+      <h2 class="section-title" data-hanim="flip"><em>Our</em> Menu</h2>
+      <div class="section-rule"></div>
+      <p class="menu-intro">Browse our menu, add items to your order, and we'll bring it straight to your table. Just let us know your table number at checkout.</p>
+    </div>
+    <div class="menu-tabs reveal" id="menuTabs"></div>
+
+    <div class="menu-search-wrap reveal">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      <input type="search" id="menuSearch" placeholder="Search menu items…" autocomplete="off"/>
+    </div>
+    <div class="menu-no-results" id="menuNoResults">No items found — try a different search.</div>
+
+    <div id="menuPanels"></div>
+  </div>
+</section>
+
+<!-- ── ITEM OPTIONS MODAL ── -->
+<div class="order-modal-overlay" id="itemModalOverlay">
+  <div class="order-modal" id="itemModal">
+    <button class="order-modal-close" id="itemModalClose" aria-label="Close">✕</button>
+    <div id="itemModalBody"></div>
+  </div>
+</div>
+
+<!-- ── FLOATING CART BUTTON ── -->
+<button id="cartBtn" aria-label="View order">
+  🛒<span id="cartCount" class="cart-count">0</span>
+</button>
+
+<!-- ── CART / CHECKOUT PANEL ── -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>Your Order</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-table-row">
+      <label for="cartTableNumber">Table Number</label>
+      <input type="number" id="cartTableNumber" min="1" max="99" placeholder="e.g. 7" inputmode="numeric"/>
+    </div>
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="cart-submit" id="cartSubmit">Place Order</button>
+    <div class="cart-success" id="cartSuccess">✓ Order sent! We'll bring it to your table shortly.</div>
+  </div>
+</div>
+
+<!-- HOURS -->
+<section id="hours">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">When to Visit</p>
+      <h2 class="section-title" data-hanim="typewriter">Opening <em>Hours</em></h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="hours-grid" id="hoursGrid"></div>
+    <p class="hours-note reveal">Last orders approximately 30 minutes before closing &middot; We recommend arriving early on weekends!</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">A Peek Inside</p>
+      <h2 class="section-title" data-hanim="glitch">Our <em>Gallery</em></h2>
+      <div class="section-rule"></div>
+      <p class="gallery-intro">From our mismatched furniture and painted walls to the food we pour love into every day — this is The Cozy Cafeteria.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall"><div class="gallery-overlay"></div>
+        <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="Inside The Cozy Cafeteria" loading="lazy"/>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="The Big Breakfast" loading="lazy"/>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="Allpress Flat White" loading="lazy"/>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="Eggs Benedict" loading="lazy"/>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="Gourmet Burger & Chips" loading="lazy"/>
+      </div>
+      <div class="gallery-item tall">
+        <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="Our cabinet full of treats" loading="lazy"/>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/600x400/c07d3a/ffffff?text=Cozy+Cafeteria" alt="The Cozy Cafeteria exterior" loading="lazy"/>
+      </div>
+    </div>
+    <p class="gallery-upload-note reveal">📸 Follow us on <a href="https://www.facebook.com/profile.php?id=61576699356560" target="_blank" style="color:var(--caramel)">Facebook</a> for even more snaps from the café.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">What People Say</p>
+      <h2 class="section-title" data-hanim="neon">Customer <em>Reviews</em></h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="reviews-grid stagger-children">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">A wonderful cozy place to sit back and enjoy. The Big Breakfast is absolutely worth it — generous portions and everything cooked perfectly. Will be back every week!</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sarah M.</div>
+            <div class="review-date">Google Review</div>
+          </div>
+          <div class="review-source" style="margin-left:auto">Google</div>
+        </div>
+      </div>
+      <div class="review-card reveal-flip">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The coffee is consistently excellent and the staff always remember my order. It feels like Nana's kitchen — warm, welcoming and full of character. My favourite spot in Onehunga.</p>
+        <div class="review-author">
+          <div class="review-avatar">J</div>
+          <div>
+            <div class="review-name">James K.</div>
+            <div class="review-date">Google Review</div>
+          </div>
+          <div class="review-source" style="margin-left:auto">Google</div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Came in with the kids on a Sunday morning and they loved it. The pancakes were amazing and the staff were so friendly and patient. The outdoor seating is great too!</p>
+        <div class="review-author">
+          <div class="review-avatar">L</div>
+          <div>
+            <div class="review-name">Lisa T.</div>
+            <div class="review-date">Facebook Review</div>
+          </div>
+          <div class="review-source" style="margin-left:auto">Facebook</div>
+        </div>
+      </div>
+      <div class="review-card reveal-flip">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The corn fritters are hands-down the best in Auckland. Crispy on the outside, perfectly seasoned, and the slow roasted tomato takes it to another level. A must-try.</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Mike R.</div>
+            <div class="review-date">Google Review</div>
+          </div>
+          <div class="review-source" style="margin-left:auto">Google</div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">Hidden gem right on Onehunga Mall. Loved the quirky decor and the Allpress coffee hit the spot. The Big Benny with smoked salmon was incredible. Already planning my return visit.</p>
+        <div class="review-author">
+          <div class="review-avatar">R</div>
+          <div>
+            <div class="review-name">Rachel B.</div>
+            <div class="review-date">Google Review</div>
+          </div>
+          <div class="review-source" style="margin-left:auto">Google</div>
+        </div>
+      </div>
+      <div class="review-card reveal-flip">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Best brunch spot near Onehunga train station. Popped in before catching a train and ended up staying for two hours. So cozy and the steak sandwich is legendary.</p>
+        <div class="review-author">
+          <div class="review-avatar">D</div>
+          <div>
+            <div class="review-name">David N.</div>
+            <div class="review-date">Google Review</div>
+          </div>
+          <div class="review-source" style="margin-left:auto">Google</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-cta reveal">
+      <a href="https://www.google.com/search?sca_esv=4a455b0f3ad2390b&sxsrf=ANbL-n69IClMdL_w7jKZwljoN4rmK6eZ2A:1781076001247&q=The+cozy+cafeteria&sa=X&ved=2ahUKEwj-7fySkfyUAxUFa_UHHaOuAKwQrrQLegQIIRAA&biw=1512&bih=917&dpr=2" target="_blank">Leave Us a Review ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE TEAM -->
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title" data-hanim="fadeslide">We're in <em>Onehunga</em></h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="location-grid">
+      <div class="map-embed reveal">
+        <iframe title="The Cozy Cafeteria map" src="https://maps.google.com/maps?q=127+Onehunga+Mall,+Onehunga,+Auckland+1061&output=embed" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="location-info-card reveal">
+        <div class="location-row">
+          <div class="location-icon">📍</div>
+          <div><div class="location-label">Address</div><div class="location-value">127 Onehunga Mall<br>Onehunga, Auckland 1061</div></div>
+        </div>
+        <div class="location-row">
+          <div class="location-icon">✉️</div>
+          <div><div class="location-label">Email</div><div class="location-value"><a href="mailto:Thecozycafeteria25@gmail.com">Thecozycafeteria25@gmail.com</a></div></div>
+        </div>
+        <div class="location-row">
+          <div class="location-icon">🚌</div>
+          <div><div class="location-label">Getting Here</div><div class="location-value">Short walk from Onehunga Train Station &amp; Bus Interchange</div></div>
+        </div>
+        <div class="location-row">
+          <div class="location-icon">🅿️</div>
+          <div><div class="location-label">Parking</div><div class="location-value">Street parking along Onehunga Mall and nearby streets</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="reveal">
+      <p class="section-label">Say Hello</p>
+      <h2 class="section-title" data-hanim="wave">Get in <em>Touch</em></h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-aside reveal">
+        <p>Questions about the menu, group bookings, catering enquiries, or just want to say hi — we'd love to hear from you.</p>
+        <div class="contact-social">
+          <a href="https://www.facebook.com/profile.php?id=61576699356560" target="_blank"><div class="social-icon">f</div>Facebook</a>
+          <a href="mailto:Thecozycafeteria25@gmail.com"><div class="social-icon">✉️</div>Thecozycafeteria25@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row-half">
+          <div class="form-row"><label for="cName">Name</label><input type="text" id="cName" placeholder="Your name"/></div>
+          <div class="form-row"><label for="cEmail">Email</label><input type="email" id="cEmail" placeholder="your@email.com"/></div>
+        </div>
+        <div class="form-row">
+          <label for="cSubject">Subject</label>
+          <select id="cSubject"><option value="">Select a topic…</option><option>General enquiry</option><option>Group booking</option><option>Catering</option><option>Menu question</option><option>Feedback</option></select>
+        </div>
+        <div class="form-row"><label for="cMessage">Message</label><textarea id="cMessage" placeholder="Tell us how we can help…"></textarea></div>
+        <div class="contact-submit-wrap">
+          <button class="form-submit" onclick="submitContact()">Send Message</button>
+        </div>
+        <div id="contactSuccess" class="form-success">Thanks for reaching out! We'll get back to you soon. ☕</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="margin-bottom:.5rem"><strong>The Cozy Cafeteria</strong> &middot; 127 Onehunga Mall, Auckland 1061</p>
+  <p>Mon–Fri 6:30am–3pm &middot; Sat 7:30am–3pm &middot; Sun 8am–3pm</p>
+  <p style="margin-top:.75rem">&copy; 2026 The Cozy Cafeteria</p>
+</footer>
+
+<script>
+/* ── PAGE CURTAIN ── */
+function hideCurtain(){
+  const c=document.getElementById('curtain');
+  if(c) c.classList.add('gone');
+}
+// Primary: hide once the DOM is ready (don't wait on slow images/iframes)
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',()=>setTimeout(hideCurtain,700));
+} else {
+  setTimeout(hideCurtain,700);
+}
+// Failsafe: force-hide after 4s no matter what (covers any edge case)
+setTimeout(hideCurtain,4000);
+
+/* ── BACK TO TOP ── */
+const btt=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{
+  btt.classList.toggle('visible', window.scrollY>500);
+}, {passive:true});
+
+/* ── FLOATING REVIEW CTA ── */
+const cta=document.getElementById('reviewCta');
+let ctaDismissed=false;
+// Show after 30s, hide if dismissed
+setTimeout(()=>{
+  if(!ctaDismissed) cta.classList.add('visible');
+}, 30000);
+document.getElementById('ctaDismiss').addEventListener('click',(e)=>{
+  e.preventDefault();
+  e.stopPropagation();
+  ctaDismissed=true;
+  cta.classList.remove('visible');
+});
+
+/* ── MOBILE NAV SWIPE TO CLOSE ── */
+let touchStartX=0;
+document.getElementById('navDrawer').addEventListener('touchstart',e=>{
+  touchStartX=e.touches[0].clientX;
+},{passive:true});
+document.getElementById('navDrawer').addEventListener('touchend',e=>{
+  const diff=e.changedTouches[0].clientX - touchStartX;
+  if(diff > 60) closeNav(); // swipe right to close
+},{passive:true});
+
+/* ── FLOATING COFFEE DECO ── */
+const deco=document.getElementById('heroDeco');
+['☕','🫘','✨','🍵','🤎'].forEach((e,i)=>{
+  for(let j=0;j<3;j++){
+    const s=document.createElement('span');
+    s.textContent=e;
+    s.style.cssText=`left:${8+j*28+i*4}%;font-size:${1+Math.random()*.8}rem;animation-duration:${16+i*5+j*4}s;animation-delay:${-j*7-i*4}s`;
+    deco.appendChild(s);
+  }
+});
+
+/* ── SCROLL PROGRESS BAR ── */
+window.addEventListener('scroll',()=>{
+  const scrolled=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;
+  document.getElementById('scrollProgress').style.width=scrolled+'%';
+  updateActiveNav();
+},{ passive:true });
+
+/* ── HAMBURGER NAV ── */
+function toggleNav(){
+  const b=document.getElementById('navBurger'),d=document.getElementById('navDrawer'),o=document.getElementById('navOverlay');
+  b.classList.toggle('open');d.classList.toggle('open');o.classList.toggle('open');
+  document.body.style.overflow=d.classList.contains('open')?'hidden':'';
+}
+function closeNav(){
+  ['navBurger','navDrawer','navOverlay'].forEach(id=>document.getElementById(id).classList.remove('open'));
+  document.body.style.overflow='';
+}
+window.addEventListener('resize',()=>{if(window.innerWidth>768)closeNav();});
+
+/* ── ACTIVE NAV LINK ON SCROLL ── */
+const navSections=['about','favourites','menu','hours','gallery','reviews','team','location','contact'];
+function updateActiveNav(){
+  const scrollY=window.scrollY+100;
+  let current='';
+  navSections.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el.offsetTop<=scrollY)current=id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.classList.toggle('nav-active',a.getAttribute('href')==='#'+current);
+  });
+}
+
+/* ── HOURS ── */
+const hoursData=[
+  {day:'Monday',time:'6:30am\n3pm'},{day:'Tuesday',time:'6:30am\n3pm'},
+  {day:'Wednesday',time:'6:30am\n3pm'},{day:'Thursday',time:'6:30am\n3pm'},
+  {day:'Friday',time:'6:30am\n3pm'},{day:'Saturday',time:'7:30am\n3pm'},
+  {day:'Sunday',time:'8am\n3pm'}
+];
+const todayIdx=new Date().getDay(),mappedIdx=todayIdx===0?6:todayIdx-1;
+const hoursGrid=document.getElementById('hoursGrid');
+hoursData.forEach((h,i)=>{
+  const isToday=i===mappedIdx;
+  const timeHtml=h.time.replace('\n','<br>– ');
+  const card=document.createElement('div');
+  card.className='hours-card'+(isToday?' today':'');
+  card.innerHTML=(isToday?'<span class="hours-today-badge">Today</span>':'')+
+    `<div class="hours-day">${h.day}</div><div class="hours-time">${timeHtml}</div>`;
+  hoursGrid.appendChild(card);
+});
+
+/* ── ANIMATED COUNTERS ── */
+function animateCounter(el){
+  const rawTarget=parseInt(el.dataset.target);
+  const isDecimal=el.dataset.decimal==='true';
+  // For 46 with decimal flag -> display as 4.6
+  const displayTarget=isDecimal?(rawTarget/10).toFixed(1):rawTarget;
+  const suffix=el.dataset.suffix||'';
+  const duration=1600;
+  const start=performance.now();
+  const update=now=>{
+    const progress=Math.min((now-start)/duration,1);
+    const ease=1-Math.pow(1-progress,3);
+    if(isDecimal){
+      const val=(ease*(rawTarget/10)).toFixed(1);
+      el.textContent=val+suffix;
+    } else {
+      const val=Math.round(ease*rawTarget);
+      el.textContent=val+suffix;
+    }
+    if(progress<1)requestAnimationFrame(update);
+    else el.textContent=displayTarget+suffix;
+  };
+  requestAnimationFrame(update);
+}
+const counterObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting&&!e.target.dataset.counted){
+      e.target.dataset.counted='1';
+      animateCounter(e.target);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.stat-num').forEach(el=>counterObserver.observe(el));
+
+/* ── RIPPLE EFFECT ON BUTTONS ── */
+function addRipple(e){
+  const btn=e.currentTarget;
+  const r=document.createElement('span');
+  const rect=btn.getBoundingClientRect();
+  const size=Math.max(rect.width,rect.height)*2;
+  r.style.cssText=`position:absolute;width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px;background:rgba(255,255,255,.25);border-radius:50%;pointer-events:none;animation:ripple .6s ease-out forwards`;
+  btn.appendChild(r);
+  setTimeout(()=>r.remove(),700);
+}
+document.querySelectorAll('.btn-primary,.btn-outline,.form-submit,.reviews-cta a').forEach(btn=>{
+  btn.addEventListener('click',addRipple);
+});
+
+/* ── PARALLAX HERO DECO ── */
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  if(deco)deco.style.transform=`translateY(${y*.15}px)`;
+},{ passive:true });
+
+/* ── STAGGERED REVEAL ── */
+const revealObs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    const parent=e.target.closest('.stagger-children');
+    if(e.isIntersecting){
+      if(parent){
+        const siblings=[...parent.children];
+        const idx=siblings.indexOf(e.target);
+        setTimeout(()=>e.target.classList.add('visible'),idx*100);
+      } else {
+        e.target.classList.add('visible');
+      }
+    } else {
+      e.target.classList.remove('visible');
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el=>revealObs.observe(el));
+
+/* ── ANIMATED SECTION RULES ── */
+const ruleObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('visible');
+    else e.target.classList.remove('visible');
+  });
+},{threshold:.5});
+document.querySelectorAll('.section-rule').forEach(el=>ruleObs.observe(el));
+
+/* ── GALLERY LIGHTBOX (simple) ── */
+document.querySelectorAll('.gallery-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    const img=item.querySelector('img');
+    if(!img)return;
+    const lb=document.createElement('div');
+    lb.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:600;display:flex;align-items:center;justify-content:center;cursor:zoom-out;animation:fadeUp .3s ease';
+    const i=document.createElement('img');
+    i.src=img.src;i.style.cssText='max-width:90vw;max-height:90vh;border-radius:2px;box-shadow:0 0 60px rgba(0,0,0,.8)';
+    lb.appendChild(i);
+    lb.addEventListener('click',()=>{lb.style.opacity='0';setTimeout(()=>lb.remove(),300);});
+    document.body.appendChild(lb);
+  });
+});
+
+/* ── CONTACT ── */
+function submitContact(){
+  const name=document.getElementById('cName').value.trim();
+  const email=document.getElementById('cEmail').value.trim();
+  const msg=document.getElementById('cMessage').value.trim();
+  if(!name||!email||!msg){
+    // Shake the empty fields
+    [['cName',name],['cEmail',email],['cMessage',msg]].forEach(([id,val])=>{
+      if(!val){
+        const el=document.getElementById(id);
+        el.style.animation='none';
+        requestAnimationFrame(()=>{el.style.animation='shake .4s ease';});
+      }
+    });
+    return;
+  }
+  document.getElementById('contactSuccess').style.display='block';
+  document.querySelector('.form-submit').disabled=true;
+  document.querySelector('.form-submit').textContent='Sent ✓';
+}
+
+/* ── PER-HEADING ANIMATIONS ── */
+(()=>{
+  // Split heading text into .ht-char spans for typewriter & wave effects
+  // Preserves <em> tags intact (don't split inside em — background-clip:text breaks with span children)
+  function splitChars(el){
+    const nodes=[...el.childNodes];
+    el.innerHTML='';
+    nodes.forEach(node=>{
+      if(node.nodeType===3){
+        // text node — wrap each non-space char
+        [...node.textContent].forEach(ch=>{
+          if(ch===' '){
+            el.appendChild(document.createTextNode(' '));
+          } else {
+            const s=document.createElement('span');
+            s.className='ht-char';
+            s.textContent=ch;
+            el.appendChild(s);
+          }
+        });
+      } else if(node.nodeType===1 && node.tagName==='EM'){
+        // <em> — keep as one animated unit, give it ht-char class directly
+        const em=node.cloneNode(true);
+        em.classList.add('ht-char','ht-em');
+        el.appendChild(em);
+      } else {
+        el.appendChild(node.cloneNode(true));
+      }
+    });
+  }
+
+  // Pre-process typewriter and wave headings
+  document.querySelectorAll('.section-title[data-hanim="typewriter"],.section-title[data-hanim="wave"]').forEach(h=>{
+    splitChars(h);
+  });
+
+  // Trigger function per heading type
+  function triggerHeading(el){
+    const type=el.dataset.hanim;
+    if(type==='typewriter'){
+      const chars=el.querySelectorAll('.ht-char');
+      el.classList.add('hanim-done');
+      chars.forEach((ch,i)=>{
+        ch.style.animationDelay=(i*0.055)+'s';
+        ch.style.animationDuration='0.001s';
+        ch.style.animationFillMode='both';
+      });
+    } else if(type==='wave'){
+      el.classList.add('hanim-done');
+      el.querySelectorAll('.ht-char').forEach((ch,i)=>{
+        ch.style.animationDelay=(i*0.045)+'s';
+        ch.style.animationFillMode='both';
+      });
+    } else {
+      el.classList.add('hanim-done');
+    }
+  }
+
+  // Observe all headings — bidirectional: reset on leave, re-animate on enter
+  const headObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      const heading=e.target;
+      if(e.isIntersecting){
+        setTimeout(()=>triggerHeading(heading),180);
+      } else {
+        // Remove hanim-done so CSS animation resets
+        heading.classList.remove('hanim-done');
+        // For typewriter/wave: also reset all char opacities
+        const type=heading.dataset.hanim;
+        if(type==='typewriter'||type==='wave'){
+          heading.querySelectorAll('.ht-char').forEach(ch=>{
+            ch.style.animationDelay='';
+            ch.style.animationFillMode='';
+          });
+        }
+      }
+    });
+  },{threshold:.15,rootMargin:'0px 0px -20px 0px'});
+
+  document.querySelectorAll('.section-title[data-hanim]').forEach(el=>headObs.observe(el));
+})();
+
+/* ── STAT BAR ENTRANCE ── */
+const statObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('stat-visible');
+    else e.target.classList.remove('stat-visible');
+  });
+},{threshold:.05,rootMargin:'0px 0px 40px 0px'});
+document.querySelectorAll('.stat-item').forEach(el=>statObs.observe(el));
+
+/* ── HOURS CARD ENTRANCE ── */
+const hoursObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const cards=[...document.querySelectorAll('.hours-card')];
+      cards.forEach((c,i)=>{
+        c.style.animationDelay=(i*.07)+'s';
+        setTimeout(()=>c.classList.add('hours-visible'),i*70);
+      });
+    } else {
+      document.querySelectorAll('.hours-card').forEach(c=>{
+        c.classList.remove('hours-visible');
+        c.style.animationDelay='';
+      });
+    }
+  });
+},{threshold:.1,rootMargin:'0px 0px 60px 0px'});
+const hg=document.getElementById('hoursGrid');
+if(hg)hoursObs.observe(hg);
+
+/* ── CONTACT FORM ROWS ENTRANCE ── */
+(()=>{
+  const rows=[...document.querySelectorAll('.contact-form .form-row')];
+  const submit=document.querySelector('.contact-submit-wrap');
+  const allEls=[...rows,submit].filter(Boolean);
+  const formObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        allEls.forEach((el,i)=>{
+          el.classList.remove('form-row-visible');
+          el.style.transitionDelay='0s';
+          setTimeout(()=>{
+            el.style.transitionDelay=(i*.09)+'s';
+            el.classList.add('form-row-visible');
+          },i*40+20);
+        });
+      } else {
+        allEls.forEach(el=>{
+          el.classList.remove('form-row-visible');
+          el.style.transitionDelay='0s';
+        });
+      }
+    });
+  },{threshold:.05,rootMargin:'0px 0px 60px 0px'});
+  // Observe just the form container for efficiency
+  const form=document.querySelector('.contact-form');
+  if(form) formObs.observe(form);
+})();
+
+/* ── FOOTER ENTRANCE ── */
+const footerObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('footer-visible');
+    else e.target.classList.remove('footer-visible');
+  });
+},{threshold:.1});
+const ft=document.querySelector('footer');
+if(ft)footerObs.observe(ft);
+
+/* ── GALLERY INDIVIDUAL ITEM ENTRANCE ── */
+const galleryObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('gallery-item-visible');
+    else e.target.classList.remove('gallery-item-visible');
+  });
+},{threshold:.08});
+document.querySelectorAll('.gallery-grid .gallery-item').forEach(el=>galleryObs.observe(el));
+
+/* ── REVEAL-FLIP OBSERVER ── */
+const flipObs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    const parent=e.target.closest('.stagger-children');
+    if(e.isIntersecting){
+      if(parent){
+        const siblings=[...parent.children];
+        const idx=siblings.indexOf(e.target);
+        setTimeout(()=>e.target.classList.add('visible'),idx*100);
+      } else {
+        e.target.classList.add('visible');
+      }
+    } else {
+      e.target.classList.remove('visible');
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal-flip').forEach(el=>flipObs.observe(el));
+
+/* ══════════════════════════════════════════
+   ORDERING SYSTEM
+   ══════════════════════════════════════════ */
+const MENU_DATA = {"categories":[{"id":"breakfast","label":"All Day Breakfast"},{"id":"lunch","label":"Lunch"},{"id":"sides","label":"Sides & Add-ons"},{"id":"drinks","label":"Drinks"},{"id":"kids","label":"Kids Menu"}],"items":[{"id":"muesli","cat":"breakfast","name":"Muesli","desc":"Homemade toasted muesli with fresh fruit and yoghurt","price":13.9},{"id":"bagel1","cat":"breakfast","name":"Bagel / Toast","desc":"Preserves with butter","price":8.9},{"id":"bagel2","cat":"breakfast","name":"Bagel / Toast","desc":"Avocado, tomato and cream cheese","price":14.9},{"id":"bagel3","cat":"breakfast","name":"Bagel / Toast","desc":"Smoked salmon, capers and cream cheese","price":17.9},{"id":"freerangeeggs","cat":"breakfast","name":"Free Range Eggs","desc":"However you like them, on white or brown toast","price":11.9,"baconOption":true,"baconPrice":16.9},{"id":"pancakes","cat":"breakfast","name":"Pancakes","desc":"Organic berries, sliced banana, maple syrup and mascarpone","price":15.9,"baconOption":true,"baconPrice":19.9},{"id":"creamymushrooms","cat":"breakfast","name":"Creamy Mushrooms","desc":"On white or brown toast","price":15.9,"baconOption":true,"baconPrice":19.9},{"id":"frenchtoast","cat":"breakfast","name":"French Toast","desc":"Brioche bread layered with bacon, grilled banana, berry compote and maple syrup","price":20.9},{"id":"chickenomelette","cat":"breakfast","name":"Chicken Omelette","desc":"Grilled chicken thigh with mushroom, cheese, balsamic dressed mesclun salad and apricot chutney","price":20.9},{"id":"cornfritters","cat":"breakfast","name":"Corn Fritters","desc":"Homemade fritters with bacon, balsamic dressed mesclun salad and slow roasted tomato","price":19.9},{"id":"hashbrownstack","cat":"breakfast","name":"Hash Brown Stack","desc":"Hash browns layered with bacon, avocado and tomato with white or brown toast","price":19.9},{"id":"minceontoast","cat":"breakfast","name":"Mince On Toast","desc":"Mince on white or brown toast with poached eggs","price":19.9},{"id":"bigbenny","cat":"breakfast","name":"Big Benny","desc":"Our eggs benedict with free range poached eggs on a kaiser roll, spinach, hashbrown, topped with homemade hollandaise","price":19.9,"choice":{"label":"Choose your protein","required":true,"options":[{"label":"Bacon","price":19.9},{"label":"NZ Smoked Salmon","price":20.9}]}},{"id":"vegegrill","cat":"breakfast","name":"Vege Grill","desc":"Our vegetarian big breakfast with tomatoes, avocado, eggs, hash brown, mushrooms, spinach and white or brown toast","price":20.9},{"id":"bigbreakfast","cat":"breakfast","name":"Big Breakfast","desc":"The works with bacon, sausages, eggs, hash brown, mushrooms, tomato and white or brown toast","price":22.9},{"id":"soupoftheday","cat":"lunch","name":"Soup of the Day","desc":"With toasted Turkish bread","price":15.9},{"id":"pasta","cat":"lunch","name":"Pasta","desc":"Fettucine Carbonara with chicken, bacon, mushroom and shredded parmesan","price":18.9},{"id":"lazysundaypizza","cat":"lunch","name":"Lazy Sunday Pizza","desc":"Selected ingredients on a homemade base, ask us for today's special","price":18.9},{"id":"calamari","cat":"lunch","name":"Calamari","desc":"Fried calamari on balsamic dressed mesclun salad with homemade aioli, sweet chili and sliced lemon","price":18.9},{"id":"grilledchickensalad","cat":"lunch","name":"Grilled Chicken Salad","desc":"Cajun spiced chicken thigh on balsamic dressed mesclun salad topped with crispy noodles","price":18.9},{"id":"blat","cat":"lunch","name":"BLAT","desc":"Bacon, lettuce, avocado, tomato all between grilled Turkish bread with fries","price":20.9},{"id":"openchickensandwich","cat":"lunch","name":"Open Chicken Sandwich","desc":"Grilled chicken with brie, tomato, mesclun salad, peach and mango relish and fries","price":20.9},{"id":"warmlambsalad","cat":"lunch","name":"Warm Lamb Salad","desc":"Seared lamb on balsamic dressed mesclun salad with homemade honey mustard, tomato, olives, feta cheese","price":20.9},{"id":"beefburger","cat":"lunch","name":"Home-made Beef Burger","desc":"Aged cheddar, greens, gherkin, caramelised onion and fries","price":21.9},{"id":"steaksandwich","cat":"lunch","name":"Steak Sandwich","desc":"Sirloin steak on Turkish bread with fried free range eggs, gherkin, garden greens and fries","price":23.9},{"id":"chunkyfries","cat":"sides","name":"Chunky Fries","desc":"With homemade aioli and tomato sauce","price":8.5},{"id":"potatowedges","cat":"sides","name":"Potato Wedges","desc":"With sweet chilli and sour cream","price":9.5},{"id":"kumarafries","cat":"sides","name":"Kumara Fries","desc":"","price":9.5},{"id":"addon_avo","cat":"sides","name":"Add On \u2014 Avocado / Spinach / Tomato","desc":"","price":5.0},{"id":"addon_mushhash","cat":"sides","name":"Add On \u2014 Mushrooms / Hash Browns","desc":"","price":5.0},{"id":"addon_eggs","cat":"sides","name":"Add On \u2014 Eggs","desc":"","price":7.0},{"id":"addon_baconsausage","cat":"sides","name":"Add On \u2014 Bacon / Sausage / Salmon","desc":"","price":7.0},{"id":"addon_gfbread","cat":"sides","name":"Add On \u2014 Gluten-Free Bread Alternative","desc":"","price":1.0},{"id":"addon_aioli","cat":"sides","name":"Add On \u2014 Aioli","desc":"","price":1.0},{"id":"addon_hollandaise","cat":"sides","name":"Add On \u2014 Hollandaise","desc":"","price":2.0},{"id":"flatwhite","cat":"drinks","sub":"hot","name":"Flat White","desc":"","sizes":[{"label":"Small","price":6.0},{"label":"Large","price":6.5},{"label":"Extra Large","price":7.2}],"hotDrinkMods":true},{"id":"cappuccino","cat":"drinks","sub":"hot","name":"Cappuccino","desc":"","sizes":[{"label":"Small","price":6.0},{"label":"Large","price":6.5},{"label":"Extra Large","price":7.2}],"hotDrinkMods":true},{"id":"latte","cat":"drinks","sub":"hot","name":"Latte","desc":"","sizes":[{"label":"Small","price":6.0},{"label":"Large","price":6.5},{"label":"Extra Large","price":7.2}],"hotDrinkMods":true},{"id":"mochaccino","cat":"drinks","sub":"hot","name":"Mochaccino","desc":"","sizes":[{"label":"Small","price":6.0},{"label":"Large","price":6.5},{"label":"Extra Large","price":7.2}],"hotDrinkMods":true},{"id":"hotchocolate","cat":"drinks","sub":"hot","name":"Hot Chocolate","desc":"","sizes":[{"label":"Small","price":6.0},{"label":"Large","price":6.5},{"label":"Extra Large","price":7.2}],"hotDrinkMods":true},{"id":"chailatte","cat":"drinks","sub":"hot","name":"Chai Latte","desc":"Spicy or sweet","sizes":[{"label":"Small","price":6.0},{"label":"Large","price":6.5},{"label":"Extra Large","price":7.2}],"hotDrinkMods":true},{"id":"piccolo","cat":"drinks","sub":"hot","name":"Piccolo","desc":"","price":5.5,"hotDrinkMods":true},{"id":"shortblack","cat":"drinks","sub":"hot","name":"Short Black / Espresso","desc":"","price":5.5,"hotDrinkMods":true},{"id":"longblack","cat":"drinks","sub":"hot","name":"Long Black","desc":"","price":5.5,"hotDrinkMods":true},{"id":"looseleaftea","cat":"drinks","sub":"hot","name":"Premium Loose Leaf Tea","desc":"","price":5.5,"choice":{"label":"Choose your tea","required":true,"options":[{"label":"English Breakfast"},{"label":"Earl Grey"},{"label":"Green"},{"label":"Garden Fruit"},{"label":"Ginger Lemon Spice"},{"label":"Pure Peppermint"},{"label":"Ginger Lemon and Honey"}]},"sugarOption":true},{"id":"icedamericano","cat":"drinks","sub":"iced","name":"Iced Americano","desc":"Over ice cube","price":6.5,"icedDrinkMods":true},{"id":"icedlatte","cat":"drinks","sub":"iced","name":"Iced Latte","desc":"Over ice cube","price":7.0,"icedDrinkMods":true},{"id":"icedmocha","cat":"drinks","sub":"iced","name":"Iced Mocha","desc":"Over ice cube","price":7.0,"icedDrinkMods":true},{"id":"icedchocolate","cat":"drinks","sub":"iced","name":"Iced Chocolate","desc":"Over ice cube","price":7.0,"icedDrinkMods":true},{"id":"icedmatcha","cat":"drinks","sub":"iced","name":"Iced Matcha","desc":"Over ice cube","price":8.5,"icedDrinkMods":true},{"id":"icedstrawberrymatcha","cat":"drinks","sub":"iced","name":"Iced Strawberry Matcha","desc":"Over ice cube","price":9.0,"icedDrinkMods":true},{"id":"smoothie","cat":"drinks","sub":"smoothie","name":"Smoothie","desc":"Mix up to 2 flavours","price":8.5,"flavourChoice":{"label":"Choose flavours (up to 2)","max":2,"options":["Berry","Banana","Feijoa","Mango"]},"altMilkPrice":1.0},{"id":"milkshake","cat":"drinks","sub":"milkshake","name":"Milkshake","desc":"Blended with ice cream","price":8.5,"choice":{"label":"Choose your flavour","required":true,"options":[{"label":"Coffee"},{"label":"Mocha"},{"label":"Chocolate"},{"label":"Chai"},{"label":"Vanilla"},{"label":"Caramel"},{"label":"Lime"},{"label":"Strawberry"}]},"milkshakeMods":true},{"id":"orangejuice","cat":"drinks","sub":"juice","name":"Charlie's Orange Juice","desc":"","price":5.0},{"id":"cranberryjuice","cat":"drinks","sub":"juice","name":"Cranberry Juice","desc":"","price":5.0},{"id":"pineapplejuice","cat":"drinks","sub":"juice","name":"Pineapple Juice","desc":"","price":5.0},{"id":"grapefruitjuice","cat":"drinks","sub":"juice","name":"Grapefruit Juice","desc":"","price":5.0},{"id":"kidsjuice","cat":"drinks","sub":"juice","name":"Kids Juice","desc":"","price":3.0},{"id":"phoenixjuice","cat":"drinks","sub":"juice","name":"Phoenix Juice","desc":"","price":5.0,"choice":{"label":"Choose your flavour","required":true,"options":[{"label":"Organic Apple"},{"label":"Orange, Mango & Apple"},{"label":"Apple, Mango & Passionfruit"}]}},{"id":"bundaberg","cat":"drinks","sub":"soft","name":"Bundaberg","desc":"","price":5.0,"choice":{"label":"Choose your flavour","required":true,"options":[{"label":"Ginger Beer"},{"label":"Peach Sparkling Drink"},{"label":"Lemon Lime & Bitters"},{"label":"Lemonade"}]}},{"id":"coke","cat":"drinks","sub":"soft","name":"Coke","desc":"","price":5.0},{"id":"cokezero","cat":"drinks","sub":"soft","name":"Coke Zero","desc":"","price":5.0},{"id":"sprite","cat":"drinks","sub":"soft","name":"Sprite","desc":"","price":5.0},{"id":"fanta","cat":"drinks","sub":"soft","name":"Fanta","desc":"","price":5.0},{"id":"kidsfries","cat":"kids","name":"Kids Fries","desc":"","price":6.0},{"id":"kidswedges","cat":"kids","name":"Kids Wedges","desc":"","price":6.6},{"id":"kidskumarafries","cat":"kids","name":"Kids Kumara Fries","desc":"","price":6.6},{"id":"kidsnuggets","cat":"kids","name":"Kids Nuggets With Fries","desc":"","price":12.9},{"id":"kidspancakes","cat":"kids","name":"Kids Pancakes","desc":"Organic berries, sliced banana, maple syrup and mascarpone","price":11.9,"baconOption":true,"baconPrice":13.9},{"id":"kidswaffle","cat":"kids","name":"Kids Waffle With Fruits","desc":"Seasonal fruits, vanilla ice cream on waffle","price":12.9},{"id":"kidsfrenchtoast","cat":"kids","name":"Kids French Toast","desc":"Brioche bread layered with bacon, grilled banana, berry compote and maple syrup","price":14.9},{"id":"kidsspaghetti","cat":"kids","name":"Kids Spaghetti Bolognese","desc":"","price":13.9},{"id":"kidspizza","cat":"kids","name":"Kids Pizza","desc":"Pineapple, bacon, sausage on homemade base","price":13.9}],"modifiers":{"alternativeMilk":0.6,"extraShot":0.5,"decaf":0.5,"flavourShot":0.6,"addIceCream":1.0,"whippedCream":1.0,"milkOptions":["Regular Milk","Soy","Oat","Almond","Coconut"],"flavourShotOptions":["None","Vanilla","Caramel","Hazelnut"],"sugarLevels":["No sugar","1 sugar","2 sugars","3 sugars","4 sugars"]}};
+
+const ORDER_STATE = { cart: [] };
+
+/* ── FIREBASE STORAGE ──
+   Orders are written to Firebase Realtime Database so every device
+   (customer phones + your kitchen screen) shares the same live data.
+   window._fb is set by the <script type="module"> in <head>. */
+function _waitForFb(cb, attempts){
+  if(window._fb){ cb(); return; }
+  if((attempts||0) > 40){ console.error('Firebase never loaded'); return; }
+  setTimeout(()=>_waitForFb(cb,(attempts||0)+1), 150);
+}
+
+/* Thin shim so existing code using window.storage still works */
+window.storage = {
+  async get(key){
+    return new Promise(resolve=>{
+      _waitForFb(async ()=>{
+        try{
+          const snap = await window._fb.get(window._fb.ref(window._fb.db,'cozy/'+key));
+          resolve(snap.exists() ? {key, value: snap.val()} : null);
+        }catch(e){ console.warn('fb.get failed:',e); resolve(null); }
+      });
+    });
+  },
+  async set(key, value){
+    return new Promise(resolve=>{
+      _waitForFb(async ()=>{
+        try{
+          await window._fb.set(window._fb.ref(window._fb.db,'cozy/'+key), value);
+          resolve({key, value});
+        }catch(e){ console.warn('fb.set failed:',e); resolve(null); }
+      });
+    });
+  },
+  async delete(key){
+    return new Promise(resolve=>{
+      _waitForFb(async ()=>{
+        try{
+          await window._fb.remove(window._fb.ref(window._fb.db,'cozy/'+key));
+          resolve({key, deleted:true});
+        }catch(e){ console.warn('fb.delete failed:',e); resolve(null); }
+      });
+    });
+  }
+};
+
+/* ── HELPERS ── */
+function money(n){ return '$'+n.toFixed(2); }
+function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ── RENDER MENU TABS & PANELS ── */
+function renderMenu(){
+  const tabsEl = document.getElementById('menuTabs');
+  const panelsEl = document.getElementById('menuPanels');
+  tabsEl.innerHTML = '';
+  panelsEl.innerHTML = '';
+
+  MENU_DATA.categories.forEach((cat,i)=>{
+    const tab = document.createElement('button');
+    tab.className = 'menu-tab' + (i===0 ? ' active' : '');
+    tab.textContent = cat.label;
+    tab.dataset.cat = cat.id;
+    tabsEl.appendChild(tab);
+
+    const panel = document.createElement('div');
+    panel.className = 'menu-panel' + (i===0 ? ' active' : '');
+    panel.id = 'tab-'+cat.id;
+
+    if(cat.id === 'drinks'){
+      // Drinks panel has subcategories
+      const subOrder = [
+        {sub:'hot', title:'Hot Drinks'},
+        {sub:'iced', title:'Iced Drinks'},
+        {sub:'smoothie', title:'Smoothies'},
+        {sub:'milkshake', title:'Milkshakes'},
+        {sub:'juice', title:'Juices & Soft Drinks'},
+        {sub:'soft', title:null}
+      ];
+      let html = '';
+      subOrder.forEach(s=>{
+        const items = MENU_DATA.items.filter(it=>it.cat==='drinks' && it.sub===s.sub);
+        if(!items.length) return;
+        if(s.title) html += `<div class="menu-cat-title">${s.title}</div>`;
+        html += '<div class="menu-grid">';
+        items.forEach(it=> html += renderMenuItem(it));
+        html += '</div>';
+      });
+      panel.innerHTML = html;
+    } else {
+      let html = '<div class="menu-grid">';
+      MENU_DATA.items.filter(it=>it.cat===cat.id).forEach(it=> html += renderMenuItem(it));
+      html += '</div>';
+      panel.innerHTML = html;
+    }
+    panelsEl.appendChild(panel);
+  });
+
+  // Tab click handlers
+  document.querySelectorAll('.menu-tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.menu-panel').forEach(p=>{
+        p.style.opacity='0';p.style.transform='translateY(8px)';
+        setTimeout(()=>{p.style.display='none';p.style.opacity='';p.style.transform='';},200);
+        p.classList.remove('active');
+      });
+      tab.classList.add('active');
+      const panel = document.getElementById('tab-'+tab.dataset.cat);
+      // clear search when switching tabs
+      const search = document.getElementById('menuSearch');
+      if(search.value){ search.value=''; search.dispatchEvent(new Event('input')); }
+      setTimeout(()=>{
+        panel.style.display='block';
+        panel.classList.add('active');
+        requestAnimationFrame(()=>{panel.style.opacity='1';panel.style.transform='translateY(0)';});
+        animateMenuPanel(panel);
+      },200);
+    });
+  });
+  document.querySelectorAll('.menu-panel').forEach(p=>{
+    p.style.transition='opacity .3s ease,transform .3s ease';
+  });
+
+  // Add-to-order button handlers
+  document.querySelectorAll('.menu-item-add').forEach(btn=>{
+    btn.addEventListener('click',()=>openItemModal(btn.dataset.itemId));
+  });
+}
+
+function renderMenuItem(it){
+  const priceLabel = it.sizes ? money(it.sizes[0].price)+'+' : (it.price!==undefined ? money(it.price) : '');
+  const descHtml = it.desc ? `<div class="menu-item-desc">${escapeHtml(it.desc)}</div>` : '';
+  return `<div class="menu-item">
+    <div class="menu-item-info">
+      <div class="menu-item-name">${escapeHtml(it.name)}</div>
+      ${descHtml}
+    </div>
+    <div class="menu-item-right">
+      <div class="menu-item-price">${priceLabel}</div>
+      <button class="menu-item-add" data-item-id="${it.id}" aria-label="Add ${escapeHtml(it.name)} to order">+</button>
+    </div>
+  </div>`;
+}
+
+/* ── MENU ITEM STAGGER ANIMATION ── */
+function animateMenuPanel(panel){
+  const items=[...panel.querySelectorAll('.menu-item')];
+  items.forEach(item=>item.classList.add('item-hidden'));
+  items.forEach((item,i)=>{
+    setTimeout(()=>item.classList.remove('item-hidden'), i*22);
+  });
+}
+const menuSecObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const active=document.querySelector('.menu-panel.active');
+      if(active) animateMenuPanel(active);
+    } else {
+      document.querySelectorAll('.menu-item').forEach(item=>item.classList.remove('item-hidden'));
+    }
+  });
+},{threshold:.05});
+const menuSecEl=document.getElementById('menu');
+if(menuSecEl) menuSecObs.observe(menuSecEl);
+
+/* ── ITEM OPTIONS MODAL ── */
+let currentModalItem = null;
+let currentModalSelections = {};
+
+function openItemModal(itemId){
+  const item = MENU_DATA.items.find(i=>i.id===itemId);
+  if(!item) return;
+  currentModalItem = item;
+  currentModalSelections = { qty:1, size:null, choice:null, flavours:[], milkType:'Regular Milk', extraShot:false, decaf:false, flavourShotType:'None', sugar:'No sugar', addIceCream:false, whippedCream:false, bacon:false, notes:'' };
+
+  if(item.sizes) currentModalSelections.size = item.sizes[0].label;
+  if(item.choice && item.choice.required) currentModalSelections.choice = item.choice.options[0].label;
+
+  renderModal();
+  document.getElementById('itemModalOverlay').classList.add('open');
+}
+
+function closeItemModal(){
+  document.getElementById('itemModalOverlay').classList.remove('open');
+  currentModalItem = null;
+}
+
+function calcModalPrice(){
+  const item = currentModalItem;
+  const sel = currentModalSelections;
+  let base = 0;
+
+  if(item.sizes){
+    const sizeObj = item.sizes.find(s=>s.label===sel.size) || item.sizes[0];
+    base = sizeObj.price;
+  } else if(item.choice && item.choice.required && item.choice.options.some(o=>o.price!==undefined)){
+    const choiceObj = item.choice.options.find(o=>o.label===sel.choice);
+    base = choiceObj ? choiceObj.price : item.price;
+  } else if(item.baconOption && sel.bacon){
+    base = item.baconPrice;
+  } else {
+    base = item.price !== undefined ? item.price : 0;
+  }
+
+  let extras = 0;
+  if(sel.milkType && sel.milkType!=='Regular Milk'){
+    extras += item.altMilkPrice !== undefined ? item.altMilkPrice : MENU_DATA.modifiers.alternativeMilk;
+  }
+  if(sel.extraShot) extras += MENU_DATA.modifiers.extraShot;
+  if(sel.decaf) extras += MENU_DATA.modifiers.decaf;
+  if(sel.flavourShotType && sel.flavourShotType!=='None') extras += MENU_DATA.modifiers.flavourShot;
+  if(sel.addIceCream) extras += MENU_DATA.modifiers.addIceCream;
+  if(sel.whippedCream) extras += MENU_DATA.modifiers.whippedCream;
+
+  return (base + extras) * sel.qty;
+}
+
+function renderModal(){
+  const item = currentModalItem;
+  const sel = currentModalSelections;
+  let html = '';
+
+  html += `<div class="modal-item-name">${escapeHtml(item.name)}</div>`;
+  if(item.desc) html += `<div class="modal-item-desc">${escapeHtml(item.desc)}</div>`;
+
+  // Size selector (pills)
+  if(item.sizes){
+    html += `<div class="modal-section"><div class="modal-section-label">Size <span class="required-star">*</span></div><div class="modal-pills">`;
+    item.sizes.forEach(s=>{
+      const checked = sel.size===s.label ? ' checked' : '';
+      html += `<label class="modal-pill${checked}"><input type="radio" name="size" value="${s.label}" ${sel.size===s.label?'checked':''}/>${s.label} <span class="modal-pill-price">${money(s.price)}</span></label>`;
+    });
+    html += `</div></div>`;
+  }
+
+  // Required choice (radio) - e.g. Big Benny protein, Tea flavour, Milkshake flavour, Phoenix juice, Bundaberg
+  if(item.choice && item.choice.required){
+    html += `<div class="modal-section"><div class="modal-section-label">${escapeHtml(item.choice.label)} <span class="required-star">*</span></div><div class="modal-options">`;
+    item.choice.options.forEach(o=>{
+      const checked = sel.choice===o.label;
+      const priceHtml = o.price!==undefined ? `<span class="modal-option-price">${money(o.price)}</span>` : '';
+      html += `<label class="modal-option${checked?' checked':''}"><div class="modal-option-label"><input type="radio" name="choice" value="${escapeHtml(o.label)}" ${checked?'checked':''}/>${escapeHtml(o.label)}</div>${priceHtml}</label>`;
+    });
+    html += `</div></div>`;
+  }
+
+  // Flavour multi-select (smoothie - up to 2)
+  if(item.flavourChoice){
+    html += `<div class="modal-section"><div class="modal-section-label">${escapeHtml(item.flavourChoice.label)}</div><div class="modal-options">`;
+    item.flavourChoice.options.forEach(f=>{
+      const checked = sel.flavours.includes(f);
+      const disabled = !checked && sel.flavours.length>=item.flavourChoice.max ? ' disabled' : '';
+      html += `<label class="modal-option${checked?' checked':''}${disabled}"><div class="modal-option-label"><input type="checkbox" name="flavour" value="${escapeHtml(f)}" ${checked?'checked':''} ${disabled?'disabled':''}/>${escapeHtml(f)}</div></label>`;
+    });
+    html += `</div></div>`;
+  }
+
+  // Bacon option (Free Range Eggs, Pancakes, Creamy Mushrooms, Kids Pancakes)
+  if(item.baconOption){
+    const checked = sel.bacon;
+    html += `<div class="modal-section"><div class="modal-section-label">Make It</div><div class="modal-options">
+      <label class="modal-option${checked?' checked':''}"><div class="modal-option-label"><input type="checkbox" id="modBacon" ${checked?'checked':''}/>Add Bacon</div><span class="modal-option-price">${money(item.baconPrice)} total</span></label>
+    </div></div>`;
+  }
+
+  // Hot drink modifiers
+  if(item.hotDrinkMods){
+    html += `<div class="modal-section"><div class="modal-section-label">Milk</div><div class="modal-pills">`;
+    MENU_DATA.modifiers.milkOptions.forEach(m=>{
+      const isAlt = m!=='Regular Milk';
+      const checked = sel.milkType===m;
+      const priceTag = isAlt ? ` <span class="modal-pill-price">+${money(MENU_DATA.modifiers.alternativeMilk)}</span>` : '';
+      html += `<label class="modal-pill${checked?' checked':''}"><input type="radio" name="milkType" value="${m}" ${checked?'checked':''}/>${m}${priceTag}</label>`;
+    });
+    html += `</div></div>`;
+    html += `<div class="modal-section"><div class="modal-section-label">Flavour Shot</div><div class="modal-pills">`;
+    MENU_DATA.modifiers.flavourShotOptions.forEach(f=>{
+      const checked = sel.flavourShotType===f;
+      const priceTag = f!=='None' ? ` <span class="modal-pill-price">+${money(MENU_DATA.modifiers.flavourShot)}</span>` : '';
+      html += `<label class="modal-pill${checked?' checked':''}"><input type="radio" name="flavourShotType" value="${f}" ${checked?'checked':''}/>${f}${priceTag}</label>`;
+    });
+    html += `</div></div>`;
+    html += `<div class="modal-section"><div class="modal-section-label">Extras</div><div class="modal-options">
+      <label class="modal-option${sel.extraShot?' checked':''}"><div class="modal-option-label"><input type="checkbox" id="modExtraShot" ${sel.extraShot?'checked':''}/>Extra Shot</div><span class="modal-option-price">+${money(MENU_DATA.modifiers.extraShot)}</span></label>
+      <label class="modal-option${sel.decaf?' checked':''}"><div class="modal-option-label"><input type="checkbox" id="modDecaf" ${sel.decaf?'checked':''}/>Decaf</div><span class="modal-option-price">+${money(MENU_DATA.modifiers.decaf)}</span></label>
+    </div></div>`;
+  }
+
+  // Iced drink modifiers
+  if(item.icedDrinkMods){
+    html += `<div class="modal-section"><div class="modal-section-label">Milk</div><div class="modal-pills">`;
+    MENU_DATA.modifiers.milkOptions.forEach(m=>{
+      const isAlt = m!=='Regular Milk';
+      const checked = sel.milkType===m;
+      const priceTag = isAlt ? ` <span class="modal-pill-price">+${money(MENU_DATA.modifiers.alternativeMilk)}</span>` : '';
+      html += `<label class="modal-pill${checked?' checked':''}"><input type="radio" name="milkType" value="${m}" ${checked?'checked':''}/>${m}${priceTag}</label>`;
+    });
+    html += `</div></div>`;
+    html += `<div class="modal-section"><div class="modal-section-label">Extras</div><div class="modal-options">
+      <label class="modal-option${sel.addIceCream?' checked':''}"><div class="modal-option-label"><input type="checkbox" id="modIceCream" ${sel.addIceCream?'checked':''}/>Add Ice Cream</div><span class="modal-option-price">+${money(MENU_DATA.modifiers.addIceCream)}</span></label>
+    </div></div>`;
+  }
+
+  // Smoothie alt milk (picker)
+  if(item.altMilkPrice){
+    html += `<div class="modal-section"><div class="modal-section-label">Milk</div><div class="modal-pills">`;
+    MENU_DATA.modifiers.milkOptions.forEach(m=>{
+      const isAlt = m!=='Regular Milk';
+      const checked = sel.milkType===m;
+      const priceTag = isAlt ? ` <span class="modal-pill-price">+${money(item.altMilkPrice)}</span>` : '';
+      html += `<label class="modal-pill${checked?' checked':''}"><input type="radio" name="milkType" value="${m}" ${checked?'checked':''}/>${m}${priceTag}</label>`;
+    });
+    html += `</div></div>`;
+  }
+
+  // Milkshake mods
+  if(item.milkshakeMods){
+    html += `<div class="modal-section"><div class="modal-section-label">Milk</div><div class="modal-pills">`;
+    MENU_DATA.modifiers.milkOptions.forEach(m=>{
+      const isAlt = m!=='Regular Milk';
+      const checked = sel.milkType===m;
+      const priceTag = isAlt ? ` <span class="modal-pill-price">+$1.00</span>` : '';
+      html += `<label class="modal-pill${checked?' checked':''}"><input type="radio" name="milkType" value="${m}" ${checked?'checked':''}/>${m}${priceTag}</label>`;
+    });
+    html += `</div></div>`;
+    html += `<div class="modal-section"><div class="modal-section-label">Extras</div><div class="modal-options">
+      <label class="modal-option${sel.whippedCream?' checked':''}"><div class="modal-option-label"><input type="checkbox" id="modWhipped" ${sel.whippedCream?'checked':''}/>Add Whipped Cream</div><span class="modal-option-price">+${money(MENU_DATA.modifiers.whippedCream)}</span></label>
+    </div></div>`;
+  }
+
+  // Sugar level (for hot drinks and tea)
+  if(item.hotDrinkMods || item.sugarOption){
+    html += `<div class="modal-section"><div class="modal-section-label">Sugar</div><div class="modal-pills">`;
+    MENU_DATA.modifiers.sugarLevels.forEach(lvl=>{
+      const checked = sel.sugar===lvl;
+      html += `<label class="modal-pill${checked?' checked':''}"><input type="radio" name="sugar" value="${lvl}" ${checked?'checked':''}/>${lvl}</label>`;
+    });
+    html += `</div></div>`;
+  }
+
+  // Quantity
+  html += `<div class="modal-section"><div class="modal-section-label">Quantity</div>
+    <div class="modal-qty">
+      <button id="modQtyMinus" aria-label="Decrease quantity">−</button>
+      <span id="modQtyVal">${sel.qty}</span>
+      <button id="modQtyPlus" aria-label="Increase quantity">+</button>
+    </div>
+  </div>`;
+
+  // Notes
+  html += `<div class="modal-section"><div class="modal-section-label">Special Instructions</div>
+    <textarea class="modal-notes" id="modNotes" placeholder="e.g. no onions, allergy info…">${escapeHtml(sel.notes)}</textarea>
+  </div>`;
+
+  // Footer
+  const canAdd = canAddToCart();
+  html += `<div class="modal-footer">
+    <div class="modal-total">Total: <span>${money(calcModalPrice())}</span></div>
+    <button class="modal-add-btn" id="modAddBtn" ${canAdd?'':'disabled'}>Add to Order</button>
+  </div>`;
+
+  document.getElementById('itemModalBody').innerHTML = html;
+  attachModalListeners();
+}
+
+function canAddToCart(){
+  const item = currentModalItem;
+  const sel = currentModalSelections;
+  if(item.choice && item.choice.required && !sel.choice) return false;
+  if(item.flavourChoice && item.flavourChoice.max && sel.flavours.length===0) return false;
+  return true;
+}
+
+function attachModalListeners(){
+  const item = currentModalItem;
+  const sel = currentModalSelections;
+
+  // Size pills
+  document.querySelectorAll('input[name="size"]').forEach(r=>{
+    r.addEventListener('change',()=>{ sel.size=r.value; renderModal(); });
+  });
+  // Required choice
+  document.querySelectorAll('input[name="choice"]').forEach(r=>{
+    r.addEventListener('change',()=>{ sel.choice=r.value; renderModal(); });
+  });
+  // Flavour multi-select
+  document.querySelectorAll('input[name="flavour"]').forEach(c=>{
+    c.addEventListener('change',()=>{
+      if(c.checked){
+        if(sel.flavours.length < item.flavourChoice.max) sel.flavours.push(c.value);
+      } else {
+        sel.flavours = sel.flavours.filter(f=>f!==c.value);
+      }
+      renderModal();
+    });
+  });
+  // Bacon
+  const bacon = document.getElementById('modBacon');
+  if(bacon) bacon.addEventListener('change',()=>{ sel.bacon=bacon.checked; renderModal(); });
+  // Milk type radios
+  document.querySelectorAll('input[name="milkType"]').forEach(r=>{
+    r.addEventListener('change',()=>{ sel.milkType=r.value; renderModal(); });
+  });
+  // Flavour shot radios
+  document.querySelectorAll('input[name="flavourShotType"]').forEach(r=>{
+    r.addEventListener('change',()=>{ sel.flavourShotType=r.value; renderModal(); });
+  });
+  // Checkboxes
+  ['modExtraShot','modDecaf','modIceCream','modWhipped'].forEach(id=>{
+    const el = document.getElementById(id);
+    if(!el) return;
+    const map = {modExtraShot:'extraShot',modDecaf:'decaf',modIceCream:'addIceCream',modWhipped:'whippedCream'};
+    el.addEventListener('change',()=>{ sel[map[id]]=el.checked; renderModal(); });
+  });
+  // Sugar pills
+  document.querySelectorAll('input[name="sugar"]').forEach(r=>{
+    r.addEventListener('change',()=>{ sel.sugar=r.value; renderModal(); });
+  });
+  // Quantity
+  const qtyMinus = document.getElementById('modQtyMinus');
+  const qtyPlus = document.getElementById('modQtyPlus');
+  if(qtyMinus) qtyMinus.addEventListener('click',()=>{ if(sel.qty>1){ sel.qty--; renderModal(); } });
+  if(qtyPlus) qtyPlus.addEventListener('click',()=>{ if(sel.qty<20){ sel.qty++; renderModal(); } });
+  // Notes
+  const notes = document.getElementById('modNotes');
+  if(notes) notes.addEventListener('input',()=>{ sel.notes = notes.value; });
+  // Add to cart
+  const addBtn = document.getElementById('modAddBtn');
+  if(addBtn) addBtn.addEventListener('click',addCurrentItemToCart);
+}
+
+function addCurrentItemToCart(){
+  const item = currentModalItem;
+  const sel = JSON.parse(JSON.stringify(currentModalSelections));
+  // preserve notes (stringify/parse is fine for primitives/arrays)
+  const unitPrice = calcModalPrice() / sel.qty;
+
+  const optsDescParts = [];
+  if(sel.size) optsDescParts.push(sel.size);
+  if(sel.choice) optsDescParts.push(sel.choice);
+  if(sel.flavours.length) optsDescParts.push(sel.flavours.join(' & '));
+  if(item.baconOption && sel.bacon) optsDescParts.push('Add Bacon');
+  if(sel.milkType && sel.milkType!=='Regular Milk') optsDescParts.push(sel.milkType+' Milk');
+  if(sel.extraShot) optsDescParts.push('Extra Shot');
+  if(sel.decaf) optsDescParts.push('Decaf');
+  if(sel.flavourShotType && sel.flavourShotType!=='None') optsDescParts.push(sel.flavourShotType+' Shot');
+  if(sel.addIceCream) optsDescParts.push('Add Ice Cream');
+  if(sel.whippedCream) optsDescParts.push('Whipped Cream');
+  if(sel.sugar && sel.sugar!=='No sugar') optsDescParts.push(sel.sugar);
+  if(sel.notes) optsDescParts.push('Note: '+sel.notes);
+
+  ORDER_STATE.cart.push({
+    itemId: item.id,
+    name: item.name,
+    qty: sel.qty,
+    unitPrice: unitPrice,
+    optsDesc: optsDescParts.join(', ')
+  });
+
+  updateCartUI();
+  closeItemModal();
+
+  // Bump animation + brief "added" feedback on the + button
+  const cartBtn = document.getElementById('cartBtn');
+  cartBtn.classList.remove('bump');
+  requestAnimationFrame(()=>cartBtn.classList.add('bump'));
+  const addBtn = document.querySelector(`.menu-item-add[data-item-id="${item.id}"]`);
+  if(addBtn){
+    addBtn.classList.add('added');
+    addBtn.textContent='✓';
+    setTimeout(()=>{ addBtn.classList.remove('added'); addBtn.textContent='+'; }, 900);
+  }
+}
+
+/* ── CART ── */
+function updateCartUI(){
+  const cartItems = document.getElementById('cartItems');
+  const cartCount = document.getElementById('cartCount');
+  const cartTotal = document.getElementById('cartTotal');
+
+  const totalQty = ORDER_STATE.cart.reduce((s,c)=>s+c.qty,0);
+  cartCount.textContent = totalQty;
+  cartCount.style.display = totalQty>0 ? 'flex' : 'none';
+
+  if(ORDER_STATE.cart.length===0){
+    cartItems.innerHTML = `<div class="cart-empty">Your order is empty.<br>Add something tasty from the menu!</div>`;
+  } else {
+    cartItems.innerHTML = ORDER_STATE.cart.map((c,idx)=>`
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <div class="cart-item-name">${c.qty} × ${escapeHtml(c.name)}</div>
+          ${c.optsDesc ? `<div class="cart-item-opts">${escapeHtml(c.optsDesc)}</div>` : ''}
+        </div>
+        <div class="cart-item-right">
+          <div class="cart-item-price">${money(c.unitPrice*c.qty)}</div>
+          <button class="cart-item-remove" data-idx="${idx}">Remove</button>
+        </div>
+      </div>
+    `).join('');
+    document.querySelectorAll('.cart-item-remove').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        ORDER_STATE.cart.splice(parseInt(btn.dataset.idx),1);
+        updateCartUI();
+      });
+    });
+  }
+
+  const total = ORDER_STATE.cart.reduce((s,c)=>s+c.unitPrice*c.qty,0);
+  cartTotal.textContent = money(total);
+}
+
+function openCart(){
+  document.getElementById('cartPanel').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+}
+function closeCart(){
+  document.getElementById('cartPanel').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+}
+
+async function placeOrder(){
+  const tableInput = document.getElementById('cartTableNumber');
+  const table = tableInput.value.trim();
+  if(!table || ORDER_STATE.cart.length===0){
+    if(!table){
+      tableInput.classList.remove('shake');
+      requestAnimationFrame(()=>tableInput.classList.add('shake'));
+      tableInput.focus();
+    }
+    return;
+  }
+
+  const submitBtn = document.getElementById('cartSubmit');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Placing order…';
+
+  const order = {
+    id: 'order_'+Date.now()+'_'+Math.random().toString(36).slice(2,7),
+    table: table,
+    items: ORDER_STATE.cart.map(c=>({name:c.name, qty:c.qty, optsDesc:c.optsDesc||'', unitPrice:c.unitPrice})),
+    total: ORDER_STATE.cart.reduce((s,c)=>s+c.unitPrice*c.qty,0),
+    status: 'new',
+    placedAt: Date.now()
+  };
+
+  try{
+    /* Write order as a single node — kitchen listens to the whole orders/ path */
+    await window.storage.set('orders/'+order.id, JSON.stringify(order));
+
+    document.getElementById('cartSuccess').classList.add('show');
+    ORDER_STATE.cart = [];
+    updateCartUI();
+    tableInput.value = '';
+    setTimeout(()=>{
+      document.getElementById('cartSuccess').classList.remove('show');
+      closeCart();
+    },2500);
+  }catch(e){
+    console.error('Order failed:', e);
+    submitBtn.textContent = 'Something went wrong — try again';
+    setTimeout(()=>{ submitBtn.textContent='Place Order'; },2000);
+  }finally{
+    submitBtn.disabled = false;
+    if(submitBtn.textContent==='Placing order…') submitBtn.textContent='Place Order';
+  }
+}
+
+/* ── INIT ORDERING SYSTEM ── */
+renderMenu();
+updateCartUI();
+
+document.getElementById('itemModalClose').addEventListener('click',closeItemModal);
+document.getElementById('itemModalOverlay').addEventListener('click',e=>{
+  if(e.target.id==='itemModalOverlay') closeItemModal();
+});
+document.getElementById('cartBtn').addEventListener('click',openCart);
+document.getElementById('cartClose').addEventListener('click',closeCart);
+document.getElementById('cartOverlay').addEventListener('click',closeCart);
+document.getElementById('cartSubmit').addEventListener('click',placeOrder);
+
+/* ── MENU SEARCH (works with dynamic panels) ── */
+const menuSearchInput = document.getElementById('menuSearch');
+const menuNoResultsEl = document.getElementById('menuNoResults');
+menuSearchInput.addEventListener('input',()=>{
+  const q = menuSearchInput.value.trim().toLowerCase();
+  if(!q){
+    document.querySelectorAll('.menu-panel').forEach(p=>{
+      p.querySelectorAll('.menu-item').forEach(item=>item.style.display='');
+      p.querySelectorAll('.menu-cat-title').forEach(t=>t.style.display='');
+      p.style.display = p.classList.contains('active') ? '' : 'none';
+    });
+    menuNoResultsEl.style.display='none';
+    return;
+  }
+  let totalVisible=0;
+  document.querySelectorAll('.menu-panel').forEach(p=>{
+    p.style.display='block';
+    p.querySelectorAll('.menu-cat-title').forEach(t=>t.style.display='none');
+    p.querySelectorAll('.menu-item').forEach(item=>{
+      const name=item.querySelector('.menu-item-name')?.textContent.toLowerCase()||'';
+      const desc=item.querySelector('.menu-item-desc')?.textContent.toLowerCase()||'';
+      const match=name.includes(q)||desc.includes(q);
+      item.style.display=match?'':'none';
+      if(match) totalVisible++;
+    });
+  });
+  menuNoResultsEl.style.display = totalVisible===0 ? 'block' : 'none';
+});
+
+/* ══════════════════════════════════════════
+   KITCHEN VIEW (hidden, ?kitchen access + PIN)
+   ══════════════════════════════════════════ */
+const KITCHEN_PIN = '2988'; // matches café phone ext for easy staff recall
+
+(function initKitchen(){
+  const params = new URLSearchParams(window.location.search);
+  if(!params.has('kitchen')) return;
+
+  // Hide normal site content
+  document.body.querySelectorAll(':scope > *').forEach(el=>{
+    if(el.id!=='kitchenPinGate' && el.id!=='kitchenView' && el.tagName!=='SCRIPT'){
+      el.style.display='none';
+    }
+  });
+
+  const unlocked = sessionStorage.getItem('cozyKitchenUnlocked')==='true';
+  if(unlocked){
+    showKitchenView();
+  } else {
+    document.getElementById('kitchenPinGate').classList.add('active');
+    const pinInput = document.getElementById('kitchenPinInput');
+    const pinSubmit = document.getElementById('kitchenPinSubmit');
+    const pinError = document.getElementById('kitchenPinError');
+    pinInput.focus();
+    function tryPin(){
+      if(pinInput.value === KITCHEN_PIN){
+        sessionStorage.setItem('cozyKitchenUnlocked','true');
+        document.getElementById('kitchenPinGate').classList.remove('active');
+        showKitchenView();
+      } else {
+        pinError.style.display='block';
+        pinInput.value='';
+        pinInput.focus();
+      }
+    }
+    pinSubmit.addEventListener('click',tryPin);
+    pinInput.addEventListener('keydown',e=>{ if(e.key==='Enter') tryPin(); });
+  }
+})();
+
+function showKitchenView(){
+  document.getElementById('kitchenView').classList.add('active');
+
+  /* Real-time listener — updates instantly when any order is placed or marked done */
+  _waitForFb(()=>{
+    const ordersRef = window._fb.ref(window._fb.db, 'cozy/orders');
+    window._fb.onValue(ordersRef, snap=>{
+      const grid = document.getElementById('kitchenGrid');
+      const meta = document.getElementById('kitchenMeta');
+      const orders = [];
+      snap.forEach(child=>{
+        try{
+          const ord = JSON.parse(child.val());
+          if(ord.status !== 'done') orders.push(ord);
+        }catch(e){}
+      });
+      orders.sort((a,b)=>a.placedAt-b.placedAt);
+      if(orders.length===0){
+        grid.innerHTML = '<div class="kitchen-empty">All caught up — no pending orders 🎉</div>';
+      } else {
+        grid.innerHTML = orders.map(renderKitchenOrder).join('');
+        grid.querySelectorAll('.kitchen-done-btn').forEach(btn=>{
+          btn.addEventListener('click',()=>markOrderDone(btn.dataset.id));
+        });
+      }
+      meta.textContent = orders.length+' active order'+(orders.length===1?'':'s')+' · Live';
+    }, err=>{
+      document.getElementById('kitchenMeta').textContent = 'Connection error — check Firebase config';
+      console.error('Firebase listener error:', err);
+    });
+  });
+
+  /* Refresh button still works as a visual reassurance, but listener is already live */
+  document.getElementById('kitchenRefresh').addEventListener('click',()=>{
+    document.getElementById('kitchenMeta').textContent = 'Listening for orders…';
+  });
+}
+
+/* loadKitchenOrders is replaced by the real-time Firebase listener in showKitchenView() */
+
+function renderKitchenOrder(order){
+  const age = Date.now()-order.placedAt;
+  const urgent = age > 10*60*1000; // 10+ minutes
+  const timeStr = new Date(order.placedAt).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+  const itemsHtml = order.items.map(it=>`
+    <div class="kitchen-item-row"><span class="kitchen-item-qty">${it.qty}×</span>${escapeHtml(it.name)}</div>
+    ${it.optsDesc ? `<div class="kitchen-item-opts">${escapeHtml(it.optsDesc)}</div>` : ''}
+  `).join('');
+  return `<div class="kitchen-order${urgent?' urgent':''}">
+    <div class="kitchen-order-header">
+      <span class="kitchen-table">Table ${escapeHtml(order.table)}</span>
+      <span class="kitchen-time">${timeStr}</span>
+    </div>
+    <div class="kitchen-items">${itemsHtml}</div>
+    <button class="kitchen-done-btn" data-id="${order.id}">Mark Done</button>
+  </div>`;
+}
+
+async function markOrderDone(orderId){
+  try{
+    await window.storage.delete('orders/'+orderId);
+    /* The real-time listener in showKitchenView() automatically re-renders */
+  }catch(e){
+    console.error('Failed to mark order done:',e);
+  }
+}
+
+</script>
+</body>
+</html>
