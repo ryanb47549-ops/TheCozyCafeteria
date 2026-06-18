@@ -930,37 +930,72 @@ footer strong{font-family:'Playfair Display',serif;font-style:italic;color:var(-
 
 
 <!-- ══ FIREBASE SDK ══ -->
-<!-- Firebase SDK via ES modules - loaded before body scripts -->
-<script type="module">
-  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-  import { getDatabase, ref, get, set, remove, onValue } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+<!-- Firebase REST API — no SDK needed, works everywhere -->
+<script>
+(function(){
+  const DB = 'https://thecozycafeteria-f7706-default-rtdb.firebaseio.com';
 
-  const app = initializeApp({
-    apiKey:            "AIzaSyBd1jQu8mMOPVgCB_hlyFeuOfN6n0xSNYA",
-    authDomain:        "thecozycafeteria-f7706.firebaseapp.com",
-    databaseURL:       "https://thecozycafeteria-f7706-default-rtdb.firebaseio.com",
-    projectId:         "thecozycafeteria-f7706",
-    storageBucket:     "thecozycafeteria-f7706.firebasestorage.app",
-    messagingSenderId: "762980256759",
-    appId:             "1:762980256759:web:d075bff9f2f55859f8fcf2"
-  });
+  /* Polling intervals for live listeners */
+  const _listeners = {};
 
-  const db = getDatabase(app);
-
-  /* Expose a simple wrapper on window so the main script can call Firebase */
   window._firebase = {
-    get:     (path) => get(ref(db, path)),
-    set:     (path, val) => set(ref(db, path), val),
-    remove:  (path) => remove(ref(db, path)),
-    on:      (path, cb, errCb) => { const r = ref(db, path); onValue(r, cb, errCb); return r; },
-    off:     (r, cb) => r ? onValue(r, ()=>{}, ()=>{}) : null,
-    ready:   true
+    /* One-time read */
+    get: async function(path){
+      const r = await fetch(DB+'/'+path+'.json');
+      if(!r.ok) throw new Error('Firebase read failed: '+r.status);
+      const data = await r.json();
+      return {
+        exists: ()=> data !== null,
+        val:    ()=> data,
+        forEach: (cb)=>{
+          if(data && typeof data === 'object'){
+            Object.entries(data).forEach(([key,val])=>{
+              cb({ key, val:()=>val, exists:()=>val!==null });
+            });
+          }
+        }
+      };
+    },
+
+    /* Write */
+    set: async function(path, val){
+      const r = await fetch(DB+'/'+path+'.json', {
+        method:'PUT',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(val)
+      });
+      if(!r.ok) throw new Error('Firebase write failed: '+r.status);
+      return r.json();
+    },
+
+    /* Delete */
+    remove: async function(path){
+      const r = await fetch(DB+'/'+path+'.json', { method:'DELETE' });
+      if(!r.ok) throw new Error('Firebase delete failed: '+r.status);
+      return true;
+    },
+
+    /* Live listener — polls every 3 seconds */
+    on: function(path, cb, errCb){
+      /* Call once immediately */
+      window._firebase.get(path).then(cb).catch(errCb||console.error);
+      /* Then poll every 3s */
+      if(_listeners[path]) clearInterval(_listeners[path]);
+      _listeners[path] = setInterval(()=>{
+        window._firebase.get(path).then(cb).catch(errCb||console.error);
+      }, 3000);
+      return path;
+    },
+
+    /* Stop listener */
+    off: function(path){
+      if(_listeners[path]){ clearInterval(_listeners[path]); delete _listeners[path]; }
+    }
   };
 
-  /* Signal that Firebase is ready */
   window._fb = true;
-  window.dispatchEvent(new Event('firebase-ready'));
-  console.log('Firebase ready');
+  console.log('Firebase REST ready');
+})();
 </script>
 </head>
 <body>
